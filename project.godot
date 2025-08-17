@@ -26,6 +26,7 @@ window/size/viewport_height=900
 [file_customization]
 
 folder_colors={
+"res://Resource/": "pink",
 "res://script/": "blue"
 }
 
