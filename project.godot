@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Handler="*res://script/____Handler.gd"
+Wallet="*res://Scene/___Wallet.tscn"
 
 [display]
 
