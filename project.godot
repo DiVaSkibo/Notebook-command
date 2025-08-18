@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Notebook-command"
+run/main_scene="uid://sb1b2dsfmvyi"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0.866588, 0.26232, 0.601617, 1)
 boot_splash/show_image=false

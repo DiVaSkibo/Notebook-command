@@ -7,7 +7,8 @@
 
 [sub_resource type="Resource" id="Resource_a5tbx"]
 script = ExtResource("2_gi4fd")
-mass = 109.757
+mass = 1.0
+radius = 0.0
 metadata/_custom_type_script = "uid://d1y5vndir1wt5"
 
 [node name="+" type="Node"]
@@ -20,6 +21,6 @@ shape = SubResource("WorldBoundaryShape2D_osv4s")
 debug_color = Color(0, 0, 0, 1)
 
 [node name="Item" parent="." instance=ExtResource("1_asc53")]
-position = Vector2(800, 128)
-mass = 89.844
+position = Vector2(800, 256)
+max_contacts_reported = 1
 resource = SubResource("Resource_a5tbx")
