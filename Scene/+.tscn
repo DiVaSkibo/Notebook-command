@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://sb1b2dsfmvyi"]
+
+[ext_resource type="PackedScene" uid="uid://c28ajc76tvb0r" path="res://Scene/__Item.tscn" id="1_asc53"]
+[ext_resource type="Script" uid="uid://d1y5vndir1wt5" path="res://script/____ItemResource.gd" id="2_gi4fd"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_osv4s"]
+
+[sub_resource type="Resource" id="Resource_a5tbx"]
+script = ExtResource("2_gi4fd")
+mass = 109.757
+metadata/_custom_type_script = "uid://d1y5vndir1wt5"
+
+[node name="+" type="Node"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(800, 704)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_osv4s")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="Item" parent="." instance=ExtResource("1_asc53")]
+position = Vector2(800, 128)
+mass = 89.844
+resource = SubResource("Resource_a5tbx")
