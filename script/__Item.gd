@@ -1,6 +1,9 @@
 class_name Item extends RigidBody2D
 
 	#region	Vars
+const SPIN_DEGREES := 11.
+const HOVER_SCALE := Vector2(11., 11.)
+
 @export var resource :ItemResource
 
 var is_focused := false
@@ -14,18 +17,18 @@ func _ready() -> void:
 	if resource.radius: $CollisionShape2D.shape.radius = resource.radius
 	gravity_scale = resource.mass
 func _physics_process(_delta: float) -> void:
-	if not freeze and not get_contact_count(): sprite.rotation_degrees += 11
+	if not freeze and not get_contact_count(): sprite.rotation_degrees += SPIN_DEGREES
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed('PickUp'):
 		if is_focused:
 			freeze = false
 			is_focused = false
-			sprite.scale -= Vector2(.11, .11)
+			sprite.scale -= HOVER_SCALE
 			apply_force(Vector2(0, -400))
 
 func back() -> void:
 	position = Vector2.ZERO
-	sprite.rotation_degrees = -11
+	sprite.rotation_degrees = -SPIN_DEGREES
 	set_deferred('freeze', true)
 #endregion
 
@@ -33,9 +36,9 @@ func back() -> void:
 func _on_mouse_entered() -> void:
 	if not freeze: return
 	is_focused = true
-	sprite.scale += Vector2(.11, .11)
+	sprite.scale += HOVER_SCALE
 func _on_mouse_exited() -> void:
 	if not freeze: return
 	is_focused = false
-	sprite.scale -= Vector2(.11, .11)
+	sprite.scale -= HOVER_SCALE
 #endregion
