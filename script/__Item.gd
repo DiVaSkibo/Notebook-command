@@ -22,6 +22,11 @@ func _input(event: InputEvent) -> void:
 			is_focused = false
 			sprite.scale -= Vector2(.11, .11)
 			apply_force(Vector2(0, -400))
+
+func back() -> void:
+	position = Vector2.ZERO
+	sprite.rotation_degrees = -11
+	set_deferred('freeze', true)
 #endregion
 
 	#region	Signals

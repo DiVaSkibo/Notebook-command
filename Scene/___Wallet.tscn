@@ -4,7 +4,14 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xob30"]
 
-[node name="wallet" type="Node2D"]
+[node name="wallet" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_ifawl")
 
 [node name="PutInArea" type="Area2D" parent="."]
@@ -13,5 +20,20 @@ position = Vector2(0, 1111)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PutInArea"]
 shape = SubResource("WorldBoundaryShape2D_xob30")
 debug_color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ListView" type="HBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 200
+alignment = 1
 
 [connection signal="body_entered" from="PutInArea" to="." method="_on_put_in_area_body_entered"]

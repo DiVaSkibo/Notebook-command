@@ -21,7 +21,6 @@ input_pickable = true
 mass = 0.01
 physics_material_override = SubResource("PhysicsMaterial_2rwoj")
 freeze = true
-contact_monitor = true
 script = ExtResource("1_q6waq")
 resource = SubResource("Resource_12m02")
 
