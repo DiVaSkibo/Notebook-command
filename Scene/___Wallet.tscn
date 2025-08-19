@@ -36,4 +36,5 @@ layout_mode = 2
 theme_override_constants/separation = 200
 alignment = 1
 
+[connection signal="item_taken" from="." to="." method="_on_item_taken"]
 [connection signal="body_entered" from="PutInArea" to="." method="_on_put_in_area_body_entered"]

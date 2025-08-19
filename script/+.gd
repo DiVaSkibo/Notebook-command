@@ -5,5 +5,6 @@ extends Node
 func _on_timer_timeout() -> void:
 	var item = load('res://Scene/__Item.tscn').instantiate()
 	item.resource = ItemResource.new()
+	item.is_collected = false
 	item.position = marker.position + Vector2(randf_range(-400, 400), 0)
 	add_child(item)
