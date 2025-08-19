@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://beguec2s4kj8q"]
+[gd_scene load_steps=6 format=3 uid="uid://beguec2s4kj8q"]
 
 [ext_resource type="Texture2D" uid="uid://bgjs6mv2d77rq" path="res://Resource/Asset/map/Map.png" id="1_cuky3"]
 [ext_resource type="Script" uid="uid://k5m1gnhmj6" path="res://script/_Map.gd" id="1_hdnhf"]
 [ext_resource type="PackedScene" uid="uid://cr2jbugq51q72" path="res://Scene/__Navigator.tscn" id="2_c4cug"]
+[ext_resource type="PackedScene" uid="uid://cu1fuy5a21i0a" path="res://Scene/___Location.tscn" id="4_tm3h7"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_c4cug"]
 vertices = PackedVector2Array(245.352, 622, 226.867, 622, 263.133, 599.344, 296.672, 592.672, 329.047, 536.008, 295.367, 550.961, 324.383, 529.211, 1119.19, 529.977, 1316.53, 537.281, 1307.24, 549.656, 930.594, 525.102, 1053.99, 521.828, 994.758, 504.898, 954, 470.93, 966, 476.141, 881.813, 498, 400.5, 334, 380.813, 334, 383.469, 323.313, 954, 410, 966, 410, 972.594, 676.313, 945.563, 697.938, 890.32, 628.891, 898.82, 535.438, 776.711, 518, 783.578, 498, 684.602, 489.75, 674.117, 518, 600.828, 485.43, 632.242, 454.852, 574.953, 463.602, 595.75, 432.398, 374.07, 518, 385.227, 514, 478.688, 518, 482.547, 514, 599.539, 389.438, 558.789, 367.719, 570.594, 353.25, 482.102, 342.156)
@@ -21,14 +22,46 @@ texture = ExtResource("1_cuky3")
 [node name="Navigator" parent="." instance=ExtResource("2_c4cug")]
 position = Vector2(1304, 544)
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(384, 328)
+[node name="locations" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 
-[node name="Marker2D2" type="Marker2D" parent="."]
-position = Vector2(960, 688)
+[node name="Location" parent="locations" instance=ExtResource("4_tm3h7")]
+layout_mode = 1
+offset_left = 783.999
+offset_top = 192.0
+offset_right = 1144.0
+offset_bottom = 552.0
+scene = &"+"
 
-[node name="Marker2D3" type="Marker2D" parent="."]
-position = Vector2(960, 408)
+[node name="Location2" parent="locations" instance=ExtResource("4_tm3h7")]
+layout_mode = 1
+offset_left = 807.999
+offset_top = 504.0
+offset_right = 1168.0
+offset_bottom = 864.0
+scene = &"__Item"
 
-[node name="Marker2D4" type="Marker2D" parent="."]
-position = Vector2(232, 624)
+[node name="Location3" parent="locations" instance=ExtResource("4_tm3h7")]
+layout_mode = 1
+offset_left = 167.999
+offset_top = 120.0
+offset_right = 527.999
+offset_bottom = 480.0
+scene = &"__Navigator"
+
+[node name="Location4" parent="locations" instance=ExtResource("4_tm3h7")]
+layout_mode = 1
+offset_left = 15.9994
+offset_top = 424.0
+offset_right = 375.999
+offset_bottom = 784.0
+scene = &"+"
+
+[node name="Location5" parent="locations" instance=ExtResource("4_tm3h7")]
+layout_mode = 1
+offset_left = 1184.0
+offset_top = 360.0
+offset_right = 1544.0
+offset_bottom = 720.0
+scene = &"__Item"

@@ -1,17 +1,23 @@
 extends NavigationRegion2D
 
 	#region	Vars
-@onready var locations :Dictionary = {
-	'mar0': $Marker2D,
-	'mar1': $Marker2D2,
-	'mar2': $Marker2D3,
-	'mar3': $Marker2D4
-}
 @onready var navigator := $Navigator as Navigator
+@onready var locations := $locations as Control
 #endregion
 
 	#region	Funcs
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed('PickUp'):
-		navigator.target = locations.values().pick_random()
+func _ready() -> void:
+	for location in locations.get_children():
+		location.navigated.connect(_on_location_navigated)
+#endregion
+
+	#region	Signals
+func _on_location_navigated(to :Location):
+	if navigator.is_on_target(to):
+		get_tree().change_scene_to_file('Scene/' + to.scene + '.tscn')
+		print()
+		print('\t\t' + '_'.repeat(to.scene.length() + 4))
+		print('\t\t| ', to.scene, ' |')
+	else:
+		navigator.target = to
 #endregion
