@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://beguec2s4kj8q"]
+
+[ext_resource type="Texture2D" uid="uid://bgjs6mv2d77rq" path="res://Resource/Asset/map/Map.png" id="1_cuky3"]
+[ext_resource type="Script" uid="uid://k5m1gnhmj6" path="res://script/_Map.gd" id="1_hdnhf"]
+[ext_resource type="PackedScene" uid="uid://cr2jbugq51q72" path="res://Scene/__Navigator.tscn" id="2_c4cug"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_c4cug"]
+vertices = PackedVector2Array(245.352, 622, 226.867, 622, 263.133, 599.344, 296.672, 592.672, 329.047, 536.008, 295.367, 550.961, 324.383, 529.211, 1119.19, 529.977, 1316.53, 537.281, 1307.24, 549.656, 930.594, 525.102, 1053.99, 521.828, 994.758, 504.898, 954, 470.93, 966, 476.141, 881.813, 498, 400.5, 334, 380.813, 334, 383.469, 323.313, 954, 410, 966, 410, 972.594, 676.313, 945.563, 697.938, 890.32, 628.891, 898.82, 535.438, 776.711, 518, 783.578, 498, 684.602, 489.75, 674.117, 518, 600.828, 485.43, 632.242, 454.852, 574.953, 463.602, 595.75, 432.398, 374.07, 518, 385.227, 514, 478.688, 518, 482.547, 514, 599.539, 389.438, 558.789, 367.719, 570.594, 353.25, 482.102, 342.156)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2, 5, 6), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(11, 7, 10), PackedInt32Array(12, 11, 10), PackedInt32Array(13, 14, 12, 10, 15), PackedInt32Array(16, 17, 18), PackedInt32Array(13, 19, 20, 14), PackedInt32Array(10, 21, 22, 23, 24), PackedInt32Array(15, 10, 24, 25, 26), PackedInt32Array(27, 26, 25, 28, 29), PackedInt32Array(30, 27, 29, 31, 32), PackedInt32Array(33, 4, 6), PackedInt32Array(33, 6, 34), PackedInt32Array(35, 33, 34, 36), PackedInt32Array(29, 35, 36, 31), PackedInt32Array(37, 30, 32, 38, 39), PackedInt32Array(39, 38, 40), PackedInt32Array(18, 39, 40), PackedInt32Array(18, 40, 16)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1336, 528, 1312, 560, 944, 536, 984, 680, 944, 712, 880, 632, 888, 544, 776, 528, 672, 528, 600, 496, 480, 528, 376, 528, 336, 544, 304, 600, 248, 632, 192, 632, 256, 592, 288, 544, 320, 520, 384, 504, 480, 504, 568, 456, 584, 432, 552, 376, 480, 352, 400, 344, 368, 344, 376, 312, 576, 344, 608, 384, 640, 448, 688, 480, 784, 488, 880, 488, 944, 464, 944, 400, 976, 400, 976, 472, 1000, 496, 1056, 512, 1120, 520)])
+
+[node name="Map" type="NavigationRegion2D"]
+navigation_polygon = SubResource("NavigationPolygon_c4cug")
+script = ExtResource("1_hdnhf")
+
+[node name="Sprite2D" type="TextureRect" parent="."]
+offset_right = 1600.0
+offset_bottom = 904.0
+texture = ExtResource("1_cuky3")
+
+[node name="Navigator" parent="." instance=ExtResource("2_c4cug")]
+position = Vector2(1304, 544)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(384, 328)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(960, 688)
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(960, 408)
+
+[node name="Marker2D4" type="Marker2D" parent="."]
+position = Vector2(232, 624)
