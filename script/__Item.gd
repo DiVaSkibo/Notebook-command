@@ -5,7 +5,7 @@ const SPIN_DEGREES := 11.
 const HOVER_SCALE := Vector2(.11, .11)
 
 @export var resource :ItemResource
-@export var is_collected :bool = true
+@export var is_collected :bool = false
 
 var is_focused := false
 var is_hold := false
@@ -16,7 +16,10 @@ var is_hold := false
 	#region	Funcs
 func _ready() -> void:
 	if resource.sprite: sprite.texture = resource.sprite
-	if resource.radius: $CollisionShape2D.shape.radius = resource.radius
+	if resource.radius:
+		var shape = CircleShape2D.new()
+		shape.radius = resource.radius
+		$CollisionShape2D.shape = shape
 	gravity_scale = resource.mass
 func _physics_process(_delta: float) -> void:
 	if is_hold: position = get_global_mouse_position()

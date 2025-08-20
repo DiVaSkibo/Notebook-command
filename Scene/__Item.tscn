@@ -1,20 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://c28ajc76tvb0r"]
+[gd_scene load_steps=6 format=3 uid="uid://c28ajc76tvb0r"]
 
 [ext_resource type="Script" uid="uid://cwcbpbfrqrcw7" path="res://script/__Item.gd" id="1_q6waq"]
-[ext_resource type="Script" uid="uid://d1y5vndir1wt5" path="res://script/____ItemResource.gd" id="2_2rwoj"]
-[ext_resource type="Texture2D" uid="uid://cxu1rmuwqlein" path="res://Resource/Asset/item/Key.png" id="2_kuais"]
+[ext_resource type="Resource" uid="uid://c6lec34preqcl" path="res://Resource/itemBucket+water.tres" id="2_2rwoj"]
+[ext_resource type="Texture2D" uid="uid://drxgeqjchkbyk" path="res://Resource/Asset/item/Bucket+water.png" id="3_2rwoj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2rwoj"]
 bounce = 0.75
 
-[sub_resource type="Resource" id="Resource_12m02"]
-script = ExtResource("2_2rwoj")
-mass = 1.0
-radius = 0.0
-metadata/_custom_type_script = "uid://d1y5vndir1wt5"
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_2rwoj"]
-radius = 16.0
 
 [node name="Item" type="RigidBody2D"]
 input_pickable = true
@@ -22,11 +15,11 @@ mass = 0.01
 physics_material_override = SubResource("PhysicsMaterial_2rwoj")
 freeze = true
 script = ExtResource("1_q6waq")
-resource = SubResource("Resource_12m02")
+resource = ExtResource("2_2rwoj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_kuais")
+texture = ExtResource("3_2rwoj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2rwoj")

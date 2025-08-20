@@ -5,6 +5,11 @@ signal item_taken(item :Item)
 	#region	Vars
 @export var items :Array[ItemResource] = []
 
+static var _index := -1:
+	get:
+		_index += 1
+		return _index
+
 @onready var listview := $CenterContainer/ListView as HBoxContainer
 #endregion
 
@@ -17,14 +22,15 @@ func append(what :Item) -> void:
 	move(what, false)
 	what.back()
 func move(what :Item, is_out :bool = true) -> void:
-	if is_out:
-		var erasenode = listview.get_children().filter(func(x:Node): return x.has_node(what.get_path())).front() as CenterContainer
-		erasenode.remove_child(what)
-		listview.remove_child(erasenode)
-		add_child(what)
-	else:
-		var container := CenterContainer.new()
+	if is_out and what.get_parent() is CenterContainer:
+		var erasecontainer = what.get_parent()
+		erasecontainer.remove_child(what)
+		listview.remove_child(erasecontainer)
+		Handler.scene.add_child(what)
+	elif not is_out:
 		what.get_parent().remove_child(what)
+		var container := CenterContainer.new()
+		container.name = 'container' + str(_index)
 		container.add_child(what)
 		listview.call_deferred('add_child', container)
 func erase(what :Item) -> void:
