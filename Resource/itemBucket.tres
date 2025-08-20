@@ -1,11 +1,15 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://dqmyocw3qmakb"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://dqmyocw3qmakb"]
 
 [ext_resource type="Script" uid="uid://d1y5vndir1wt5" path="res://script/____ItemResource.gd" id="1_0mkon"]
 [ext_resource type="Texture2D" uid="uid://w1jl5iqk6hhv" path="res://Resource/Asset/item/Bucket.png" id="2_owcp8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0mkon"]
+radius = 40.0
+height = 111.0
 
 [resource]
 script = ExtResource("1_0mkon")
 sprite = ExtResource("2_owcp8")
 mass = 2.0
-radius = 30.0
+shape = SubResource("CapsuleShape2D_0mkon")
 metadata/_custom_type_script = "uid://d1y5vndir1wt5"

@@ -2,4 +2,4 @@ class_name ItemResource extends Resource
 
 @export var sprite :Texture2D
 @export_range(-8., 8.) var mass :float = 1.
-@export var radius :float
+@export var shape :Shape2D

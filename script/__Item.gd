@@ -16,10 +16,7 @@ var is_hold := false
 	#region	Funcs
 func _ready() -> void:
 	if resource.sprite: sprite.texture = resource.sprite
-	if resource.radius:
-		var shape = CircleShape2D.new()
-		shape.radius = resource.radius
-		$CollisionShape2D.shape = shape
+	if resource.shape: $CollisionShape2D.shape = resource.shape
 	gravity_scale = resource.mass
 func _physics_process(_delta: float) -> void:
 	if is_hold: position = get_global_mouse_position()

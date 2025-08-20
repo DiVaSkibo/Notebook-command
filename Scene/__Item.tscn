@@ -7,9 +7,12 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2rwoj"]
 bounce = 0.75
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2rwoj"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_12m02"]
+radius = 40.0
+height = 112.0
 
 [node name="Item" type="RigidBody2D"]
+collision_mask = 0
 input_pickable = true
 mass = 0.01
 physics_material_override = SubResource("PhysicsMaterial_2rwoj")
@@ -22,7 +25,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_2rwoj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_2rwoj")
+shape = SubResource("CapsuleShape2D_12m02")
 debug_color = Color(0, 1, 0, 0.0431373)
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
