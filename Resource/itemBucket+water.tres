@@ -9,6 +9,7 @@ height = 111.0
 
 [resource]
 script = ExtResource("1_tm2a5")
+name = "Bucket+water"
 sprite = ExtResource("2_g8vbg")
 mass = 4.0
 shape = SubResource("CapsuleShape2D_tm2a5")

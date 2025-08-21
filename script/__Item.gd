@@ -18,6 +18,7 @@ var is_hold := false
 
 	#region	Funcs
 func _ready() -> void:
+	name = resource.name + str(randi() % 11)
 	if resource.sprite: sprite.texture = resource.sprite
 	if resource.shape: $CollisionShape2D.shape = resource.shape
 	gravity_scale = resource.mass
