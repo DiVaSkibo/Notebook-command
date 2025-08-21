@@ -1,8 +1,69 @@
-[gd_scene load_steps=3 format=3 uid="uid://cymnifrwr5msq"]
+[gd_scene load_steps=7 format=3 uid="uid://cymnifrwr5msq"]
 
 [ext_resource type="Script" uid="uid://c8ejmronni24g" path="res://script/___Wallet.gd" id="1_ifawl"]
+[ext_resource type="Texture2D" uid="uid://crpipjeahnaib" path="res://icon.svg" id="2_xob30"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xob30"]
+
+[sub_resource type="Animation" id="Animation_xob30"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 960)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CenterContainer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ifawl"]
+resource_name = "useWallet"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 960), Vector2(0, 772)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CenterContainer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cq288"]
+_data = {
+&"RESET": SubResource("Animation_xob30"),
+&"useWallet": SubResource("Animation_ifawl")
+}
 
 [node name="wallet" type="Control"]
 layout_mode = 3
@@ -22,12 +83,14 @@ shape = SubResource("WorldBoundaryShape2D_xob30")
 debug_color = Color(0, 0, 0, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -128.0
+offset_top = 60.0
+offset_bottom = 188.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -36,5 +99,19 @@ layout_mode = 2
 theme_override_constants/separation = 200
 alignment = 1
 
+[node name="Pocket" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 768.0
+offset_right = 256.0
+offset_bottom = 896.0
+texture_normal = ExtResource("2_xob30")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cq288")
+}
+
 [connection signal="item_taken" from="." to="." method="_on_item_taken"]
 [connection signal="body_entered" from="PutInArea" to="." method="_on_put_in_area_body_entered"]
+[connection signal="pressed" from="Pocket" to="." method="_on_pocket_pressed"]

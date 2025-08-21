@@ -10,7 +10,9 @@ static var _index := -1:
 		_index += 1
 		return _index
 
+@onready var center_conteiner := $CenterContainer as CenterContainer
 @onready var listview := $CenterContainer/ListView as HBoxContainer
+@onready var animation_player := $AnimationPlayer as AnimationPlayer
 #endregion
 
 	#region	Funcs
@@ -44,6 +46,10 @@ func erase(what :Item) -> void:
 func _on_item_taken(item :Item):
 	move(item)
 
+func _on_pocket_pressed() -> void:
+	if center_conteiner.visible: animation_player.play_backwards('useWallet')
+	else: animation_player.play('useWallet')
+	await animation_player.animation_finished
 func _on_put_in_area_body_entered(body: Node2D) -> void:
 	if body is not Item: return
 	append(body)
