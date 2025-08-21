@@ -7,6 +7,7 @@ extends NavigationRegion2D
 
 	#region	Funcs
 func _ready() -> void:
+	Wallet.hide()
 	for location in locations.get_children():
 		location.navigated.connect(_on_location_navigated)
 #endregion
@@ -14,6 +15,7 @@ func _ready() -> void:
 	#region	Signals
 func _on_location_navigated(to :Location):
 	if navigator.is_on_target(to):
+		Wallet.show()
 		get_tree().change_scene_to_file('Scene/' + to.scene + '.tscn')
 		print()
 		print('\t\t' + '_'.repeat(to.scene.length() + 4))
