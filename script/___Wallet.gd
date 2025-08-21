@@ -3,6 +3,11 @@ extends Control
 signal item_taken(item :Item)
 
 	#region	Vars
+@export var is_shown := false:
+	set(x):
+		is_shown = x
+		if is_shown: animation_player.play('useWallet')
+		else: animation_player.play_backwards('useWallet')
 @export var items :Array[ItemResource] = []
 
 static var _index := -1:
@@ -47,8 +52,7 @@ func _on_item_taken(item :Item):
 	move(item)
 
 func _on_pocket_pressed() -> void:
-	if center_conteiner.visible: animation_player.play_backwards('useWallet')
-	else: animation_player.play('useWallet')
+	is_shown = not is_shown
 	await animation_player.animation_finished
 func _on_put_in_area_body_entered(body: Node2D) -> void:
 	if body is not Item: return

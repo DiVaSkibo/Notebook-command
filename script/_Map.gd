@@ -7,6 +7,7 @@ extends NavigationRegion2D
 
 	#region	Funcs
 func _ready() -> void:
+	Wallet.is_shown = false
 	Wallet.hide()
 	for location in locations.get_children():
 		location.navigated.connect(_on_location_navigated)
