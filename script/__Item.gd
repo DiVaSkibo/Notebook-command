@@ -1,5 +1,7 @@
 class_name Item extends RigidBody2D
 
+signal used
+
 	#region	Vars
 const SPIN_DEGREES := 11.
 const HOVER_SCALE := Vector2(.11, .11)
@@ -7,6 +9,7 @@ const HOVER_SCALE := Vector2(.11, .11)
 @export var resource :ItemResource
 @export var is_collected :bool = false
 
+var interactor :Interactor
 var is_focused := false
 var is_hold := false
 
@@ -23,11 +26,14 @@ func _physics_process(_delta: float) -> void:
 	if not freeze and not get_contact_count(): sprite.rotation_degrees += SPIN_DEGREES
 func _input(event: InputEvent) -> void:
 	if not is_focused: return
-	if event.is_action_released('PickUp'):
+	if event.is_action_released('Use'):
 		if is_collected:
-			put_in()
-			is_hold = false
-	elif event.is_action_pressed('PickUp'):
+			if interactor:
+				if interactor.key == resource: interactor.interacted.emit(self)
+				else: put_in()
+			else: put_in()
+		is_hold = false
+	elif event.is_action_pressed('Use'):
 		if is_collected:
 			Wallet.item_taken.emit(self)
 			is_hold = true
@@ -38,6 +44,10 @@ func back() -> void:
 	rotation = 0
 	sprite.rotation = 0
 	set_deferred('freeze', true)
+
+func use() -> void:
+	used.emit()
+	print('\n\t', self, '  |>  ', interactor, '\n')
 func put_in() -> void:
 	freeze = false
 	is_focused = false
@@ -46,6 +56,9 @@ func put_in() -> void:
 #endregion
 
 	#region	Signals
+func _on_used():
+	queue_free()
+
 func _on_mouse_entered() -> void:
 	if not freeze: return
 	is_focused = true

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://sb1b2dsfmvyi"]
+[gd_scene load_steps=7 format=3 uid="uid://sb1b2dsfmvyi"]
 
 [ext_resource type="Script" uid="uid://dnehxnbbxfoxm" path="res://script/+.gd" id="1_a5tbx"]
 [ext_resource type="PackedScene" uid="uid://c28ajc76tvb0r" path="res://Scene/__Item.tscn" id="1_asc53"]
+[ext_resource type="PackedScene" uid="uid://dui626cl3n5lj" path="res://Scene/__Interactor.tscn" id="2_itlmv"]
 [ext_resource type="Resource" uid="uid://dqmyocw3qmakb" path="res://Resource/itemBucket.tres" id="3_b0uks"]
 [ext_resource type="Resource" uid="uid://ccqbqvdoyja6j" path="res://Resource/itemRum.tres" id="4_itlmv"]
 [ext_resource type="Resource" uid="uid://d3d426if74gdh" path="res://Resource/itemCoin.tres" id="5_f37ww"]
@@ -9,19 +10,22 @@
 [node name="+" type="Node"]
 script = ExtResource("1_a5tbx")
 
+[node name="Interactor" parent="." instance=ExtResource("2_itlmv")]
+position = Vector2(1216, 640)
+
 [node name="Item" parent="." instance=ExtResource("1_asc53")]
-position = Vector2(416, 288)
+position = Vector2(192, 288)
 resource = ExtResource("3_b0uks")
 
 [node name="Item2" parent="." instance=ExtResource("1_asc53")]
-position = Vector2(672, 288)
+position = Vector2(448, 288)
 
 [node name="Item3" parent="." instance=ExtResource("1_asc53")]
-position = Vector2(928, 288)
+position = Vector2(704, 288)
 resource = ExtResource("4_itlmv")
 
 [node name="Item4" parent="." instance=ExtResource("1_asc53")]
-position = Vector2(1184, 288)
+position = Vector2(960, 288)
 resource = ExtResource("5_f37ww")
 
 [node name="Timer" type="Timer" parent="."]

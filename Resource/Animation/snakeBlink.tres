@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://c87d7f121a2mx"]
+
+[ext_resource type="Texture2D" uid="uid://drtexcv8vmwj" path="res://Resource/Asset/character/snake00.png" id="1_dfrxb"]
+[ext_resource type="Texture2D" uid="uid://cxm8lskts2wwu" path="res://Resource/Asset/character/snake01.png" id="2_rgb7v"]
+[ext_resource type="Texture2D" uid="uid://kjfjqgxl6f3j" path="res://Resource/Asset/character/snake02.png" id="3_pkghy"]
+[ext_resource type="Texture2D" uid="uid://bbnnxaf57vmq7" path="res://Resource/Asset/character/snake03.png" id="4_dutie"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 50.0,
+"texture": ExtResource("1_dfrxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rgb7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pkghy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dutie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pkghy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rgb7v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]

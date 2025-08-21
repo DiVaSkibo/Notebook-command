@@ -17,6 +17,7 @@ input_pickable = true
 mass = 0.01
 physics_material_override = SubResource("PhysicsMaterial_2rwoj")
 freeze = true
+freeze_mode = 1
 script = ExtResource("1_q6waq")
 resource = ExtResource("2_2rwoj")
 
@@ -30,3 +31,4 @@ debug_color = Color(0, 1, 0, 0.0431373)
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="used" from="." to="." method="_on_used"]
