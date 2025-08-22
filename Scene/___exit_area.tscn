@@ -7,6 +7,7 @@
 [node name="exitArea" type="Area2D"]
 collision_layer = 2
 collision_mask = 2
+monitorable = false
 script = ExtResource("1_e25l5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

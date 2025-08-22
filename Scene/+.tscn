@@ -17,7 +17,7 @@ script = ExtResource("1_a5tbx")
 [node name="floor" type="StaticBody2D" parent="."]
 position = Vector2(780, 704)
 collision_layer = 2
-collision_mask = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
 shape = SubResource("WorldBoundaryShape2D_je1xi")
