@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PirateResource" load_steps=4 format=3 uid="uid://uerqbr5j7uyj"]
+
+[ext_resource type="Script" uid="uid://crhhlebjqgdw" path="res://script/____PirateResource.gd" id="1_4bcfp"]
+[ext_resource type="Texture2D" uid="uid://c8os0qso70cff" path="res://Resource/Asset/character/Shiushin.png" id="2_lvgid"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a30nw"]
+radius = 24.0
+height = 192.0
+
+[resource]
+script = ExtResource("1_4bcfp")
+name = "Shiushin"
+sprite = ExtResource("2_lvgid")
+shape = SubResource("CapsuleShape2D_a30nw")
+metadata/_custom_type_script = "uid://crhhlebjqgdw"

@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Fiuf extends CharacterBody2D
 
 	#region	Vars
 @export var speed :float = 300
