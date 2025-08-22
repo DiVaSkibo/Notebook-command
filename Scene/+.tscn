@@ -1,35 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://sb1b2dsfmvyi"]
+[gd_scene load_steps=9 format=3 uid="uid://sb1b2dsfmvyi"]
 
 [ext_resource type="Script" uid="uid://dnehxnbbxfoxm" path="res://script/+.gd" id="1_a5tbx"]
 [ext_resource type="PackedScene" uid="uid://c28ajc76tvb0r" path="res://Scene/__Item.tscn" id="1_asc53"]
 [ext_resource type="PackedScene" uid="uid://dui626cl3n5lj" path="res://Scene/__Interactor.tscn" id="2_itlmv"]
-[ext_resource type="PackedScene" uid="uid://dro16dcd630iy" path="res://Scene/___exit_area.tscn" id="2_je1xi"]
+[ext_resource type="PackedScene" uid="uid://11uvw53sn2h" path="res://Scene/___phisic_area.tscn" id="2_je1xi"]
 [ext_resource type="Resource" uid="uid://dqmyocw3qmakb" path="res://Resource/itemBucket.tres" id="3_b0uks"]
 [ext_resource type="Resource" uid="uid://ccqbqvdoyja6j" path="res://Resource/itemRum.tres" id="4_itlmv"]
 [ext_resource type="Resource" uid="uid://d3d426if74gdh" path="res://Resource/itemCoin.tres" id="5_f37ww"]
 [ext_resource type="PackedScene" uid="uid://bxp8xggfdkxe8" path="res://Scene/__Fiuf.tscn" id="7_f37ww"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_je1xi"]
-
 [node name="+" type="Node"]
 script = ExtResource("1_a5tbx")
 
-[node name="floor" type="StaticBody2D" parent="."]
-position = Vector2(780, 704)
-collision_layer = 2
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
-shape = SubResource("WorldBoundaryShape2D_je1xi")
-debug_color = Color(0, 0, 0, 1)
-
-[node name="exitArea" parent="." instance=ExtResource("2_je1xi")]
-position = Vector2(-128, 0)
-rotation = 1.57079
-
-[node name="exitArea2" parent="." instance=ExtResource("2_je1xi")]
-position = Vector2(1728, 0)
-rotation = 4.71238
+[node name="PhisicArea" parent="." instance=ExtResource("2_je1xi")]
 
 [node name="Interactor" parent="." instance=ExtResource("2_itlmv")]
 position = Vector2(1216, 640)

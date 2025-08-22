@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://11uvw53sn2h"]
+
+[ext_resource type="Script" uid="uid://bfw3qo80jov23" path="res://script/___phisic_area.gd" id="1_fcdvb"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ei50n"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_25cba"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fiw0n"]
+normal = Vector2(-1, 0)
+
+[node name="PhisicArea" type="Node2D"]
+script = ExtResource("1_fcdvb")
+
+[node name="floor" type="StaticBody2D" parent="."]
+position = Vector2(780, 704)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+shape = SubResource("WorldBoundaryShape2D_ei50n")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="leftArea" type="Area2D" parent="."]
+position = Vector2(-128, 0)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftArea"]
+shape = SubResource("WorldBoundaryShape2D_25cba")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="rightArea" type="Area2D" parent="."]
+position = Vector2(1728, 0)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightArea"]
+shape = SubResource("WorldBoundaryShape2D_fiw0n")
+debug_color = Color(1, 1, 1, 1)
+
+[connection signal="body_entered" from="leftArea" to="." method="_on_left_area_body_entered"]
+[connection signal="body_entered" from="rightArea" to="." method="_on_right_area_body_entered"]
