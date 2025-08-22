@@ -6,6 +6,7 @@ enum Result { coin, rum, bucket_water, upyi, upbibeni, upshiushin }
 @export var result :Result
 @export var sprite_frames :SpriteFrames
 
+
 func lead(to :Result) -> void:
 	match to:
 		Result.coin: pass
