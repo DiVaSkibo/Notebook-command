@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxp8xggfdkxe8"]
+
+[ext_resource type="Script" uid="uid://cbypdpr18i4fa" path="res://script/__Fiuf.gd" id="1_0076u"]
+[ext_resource type="Texture2D" uid="uid://brmc31h7jrje6" path="res://Resource/Asset/character/Fiuf.png" id="2_1y6md"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eqe1w"]
+radius = 64.0
+
+[node name="Fiuf" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+input_pickable = true
+script = ExtResource("1_0076u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_1y6md")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_eqe1w")
+debug_color = Color(1, 0, 1, 0.0431373)
