@@ -11,11 +11,12 @@ config_version=5
 [application]
 
 config/name="Notebook-command"
-run/main_scene="uid://sb1b2dsfmvyi"
+run/main_scene="uid://dvlqy7np371ua"
 config/features=PackedStringArray("4.4", "Forward Plus")
-boot_splash/bg_color=Color(0.825856, 0.825856, 0.825856, 1)
-boot_splash/show_image=false
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.0745098, 0.0823529, 0.0941176, 1)
+boot_splash/fullsize=false
+boot_splash/image="uid://dmpl2jl0tjf7y"
+config/icon="uid://dmpl2jl0tjf7y"
 
 [autoload]
 

@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvlqy7np371ua"]
+[gd_scene load_steps=6 format=3 uid="uid://dvlqy7np371ua"]
 
 [ext_resource type="Texture2D" uid="uid://f2fysyukjqdo" path="res://Resource/Asset/background/shipWheel.png" id="1_tgpij"]
 [ext_resource type="PackedScene" uid="uid://11uvw53sn2h" path="res://Scene/___phisic_area.tscn" id="2_ydt8f"]
 [ext_resource type="PackedScene" uid="uid://bxp8xggfdkxe8" path="res://Scene/__Fiuf.tscn" id="3_ojg7e"]
 [ext_resource type="PackedScene" uid="uid://cgd4eoxo8eqlm" path="res://Scene/__Pirate.tscn" id="3_ydt8f"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ydt8f"]
+normal = Vector2(-1, 0)
 
 [node name="ShipWheelScene" type="Node2D"]
 
@@ -14,6 +17,15 @@ texture = ExtResource("1_tgpij")
 
 [node name="PhisicArea" parent="." instance=ExtResource("2_ydt8f")]
 left_scene = &"ShipScene"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PhisicArea"]
+position = Vector2(1472, 0)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhisicArea/StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_ydt8f")
+debug_color = Color(1, 1, 1, 1)
 
 [node name="Pirate" parent="." instance=ExtResource("3_ydt8f")]
 position = Vector2(1088, 664)

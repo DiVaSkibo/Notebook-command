@@ -1,20 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgd4eoxo8eqlm"]
+[gd_scene load_steps=4 format=3 uid="uid://cgd4eoxo8eqlm"]
 
 [ext_resource type="Script" uid="uid://cie08ns1s4ajh" path="res://script/__Pirate.gd" id="1_8bugv"]
-[ext_resource type="Texture2D" uid="uid://muw5vjnnqmnt" path="res://Resource/Asset/character/Biob.png" id="1_imawj"]
-[ext_resource type="Resource" uid="uid://b7k3d2ytd74lu" path="res://Resource/pirateBiob.tres" id="2_eqe1w"]
+[ext_resource type="Texture2D" uid="uid://c8os0qso70cff" path="res://Resource/Asset/character/Shiushin.png" id="3_eqe1w"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_eqe1w"]
-radius = 40.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8bugv"]
+radius = 24.0
+height = 192.0
 
 [node name="Pirate" type="CharacterBody2D"]
 script = ExtResource("1_8bugv")
-resource = ExtResource("2_eqe1w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("1_imawj")
+texture = ExtResource("3_eqe1w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_eqe1w")
+shape = SubResource("CapsuleShape2D_8bugv")
 debug_color = Color(0.642592, 0, 1, 0.0431373)
