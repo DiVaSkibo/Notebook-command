@@ -6,7 +6,7 @@ class_name Navigator extends CharacterBody2D
 	set(x):
 		if x == target: return
 		target = x
-		navagent.target_position = target.coordinates
+		navagent.target_position = target.get_node('Marker2D').global_position
 
 @onready var navagent := $NavigationAgent2D as NavigationAgent2D
 @onready var tween :Tween

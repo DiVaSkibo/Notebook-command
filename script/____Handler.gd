@@ -21,6 +21,7 @@ const ITEMS :Dictionary = {
 var scene :
 	set(x): get_tree().change_scene_to_packed(SCENES[x])
 	get: return get_tree().current_scene
+var prev_scene :StringName
 
 
 func _input(event: InputEvent) -> void:

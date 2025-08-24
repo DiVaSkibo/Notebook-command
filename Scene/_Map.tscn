@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://beguec2s4kj8q"]
+[gd_scene load_steps=10 format=3 uid="uid://beguec2s4kj8q"]
 
 [ext_resource type="Script" uid="uid://k5m1gnhmj6" path="res://script/_Map.gd" id="1_hdnhf"]
-[ext_resource type="Texture2D" uid="uid://daanv25eaj63e" path="res://Resource/Asset/map/Map.png" id="2_577lt"]
 [ext_resource type="PackedScene" uid="uid://cr2jbugq51q72" path="res://Scene/__Navigator.tscn" id="2_c4cug"]
 [ext_resource type="Texture2D" uid="uid://b3g5s3uv318vg" path="res://Resource/Asset/map/roads.png" id="2_tm3h7"]
 [ext_resource type="PackedScene" uid="uid://cu1fuy5a21i0a" path="res://Scene/___Location.tscn" id="4_tm3h7"]
@@ -22,15 +21,6 @@ navigation_polygon = SubResource("NavigationPolygon_tm3h7")
 use_edge_connections = false
 script = ExtResource("1_hdnhf")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("2_577lt")
-
-[node name="Navigator" parent="." instance=ExtResource("2_c4cug")]
-position = Vector2(1344, 736)
-
 [node name="locations" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -45,7 +35,7 @@ texture_normal = ExtResource("6_qntkv")
 scene = &"ShipScene"
 
 [node name="Marker2D" type="Marker2D" parent="locations/Ship"]
-position = Vector2(-480, 280)
+position = Vector2(66, 289)
 
 [node name="Beach" parent="locations" instance=ExtResource("4_tm3h7")]
 layout_mode = 1
@@ -56,6 +46,9 @@ offset_bottom = 906.0
 texture_normal = ExtResource("7_xo1ly")
 scene = &"BeachScene"
 
+[node name="Marker2D" type="Marker2D" parent="locations/Beach"]
+position = Vector2(145, 80)
+
 [node name="Market" parent="locations" instance=ExtResource("4_tm3h7")]
 layout_mode = 1
 offset_left = 867.0
@@ -64,6 +57,9 @@ offset_right = 1129.0
 offset_bottom = 489.0
 texture_normal = ExtResource("8_xo1ly")
 scene = &"MarketScene"
+
+[node name="Marker2D" type="Marker2D" parent="locations/Market"]
+position = Vector2(114, 149)
 
 [node name="Island" parent="locations" instance=ExtResource("4_tm3h7")]
 layout_mode = 1
@@ -74,8 +70,14 @@ offset_bottom = 964.0
 texture_normal = ExtResource("9_l5djw")
 scene = &"IslandScene"
 
+[node name="Marker2D" type="Marker2D" parent="locations/Island"]
+position = Vector2(269, 110)
+
 [node name="roads" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
 texture = ExtResource("2_tm3h7")
+
+[node name="Navigator" parent="." instance=ExtResource("2_c4cug")]
+position = Vector2(1344, 736)
