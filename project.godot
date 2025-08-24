@@ -65,5 +65,4 @@ moveRight={
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 environment/defaults/default_clear_color=Color(0.477528, 0.861515, 0.90732, 1)

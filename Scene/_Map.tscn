@@ -1,26 +1,26 @@
 [gd_scene load_steps=6 format=3 uid="uid://beguec2s4kj8q"]
 
-[ext_resource type="Texture2D" uid="uid://daanv25eaj63e" path="res://Resource/Asset/map/Map.png" id="1_cuky3"]
 [ext_resource type="Script" uid="uid://k5m1gnhmj6" path="res://script/_Map.gd" id="1_hdnhf"]
 [ext_resource type="PackedScene" uid="uid://cr2jbugq51q72" path="res://Scene/__Navigator.tscn" id="2_c4cug"]
+[ext_resource type="Texture2D" uid="uid://b3g5s3uv318vg" path="res://Resource/Asset/map/roads.png" id="2_tm3h7"]
 [ext_resource type="PackedScene" uid="uid://cu1fuy5a21i0a" path="res://Scene/___Location.tscn" id="4_tm3h7"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_c4cug"]
-vertices = PackedVector2Array(245.352, 622, 226.867, 622, 263.133, 599.344, 296.672, 592.672, 329.047, 536.008, 295.367, 550.961, 324.383, 529.211, 1119.19, 529.977, 1316.53, 537.281, 1307.24, 549.656, 930.594, 525.102, 1053.99, 521.828, 994.758, 504.898, 954, 470.93, 966, 476.141, 881.813, 498, 400.5, 334, 380.813, 334, 383.469, 323.313, 954, 410, 966, 410, 972.594, 676.313, 945.563, 697.938, 890.32, 628.891, 898.82, 535.438, 776.711, 518, 783.578, 498, 684.602, 489.75, 674.117, 518, 600.828, 485.43, 632.242, 454.852, 574.953, 463.602, 595.75, 432.398, 374.07, 518, 385.227, 514, 478.688, 518, 482.547, 514, 599.539, 389.438, 558.789, 367.719, 570.594, 353.25, 482.102, 342.156)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2, 5, 6), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(11, 7, 10), PackedInt32Array(12, 11, 10), PackedInt32Array(13, 14, 12, 10, 15), PackedInt32Array(16, 17, 18), PackedInt32Array(13, 19, 20, 14), PackedInt32Array(10, 21, 22, 23, 24), PackedInt32Array(15, 10, 24, 25, 26), PackedInt32Array(27, 26, 25, 28, 29), PackedInt32Array(30, 27, 29, 31, 32), PackedInt32Array(33, 4, 6), PackedInt32Array(33, 6, 34), PackedInt32Array(35, 33, 34, 36), PackedInt32Array(29, 35, 36, 31), PackedInt32Array(37, 30, 32, 38, 39), PackedInt32Array(39, 38, 40), PackedInt32Array(18, 39, 40), PackedInt32Array(18, 40, 16)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(1336, 528, 1312, 560, 944, 536, 984, 680, 944, 712, 880, 632, 888, 544, 776, 528, 672, 528, 600, 496, 480, 528, 376, 528, 336, 544, 304, 600, 248, 632, 192, 632, 256, 592, 288, 544, 320, 520, 384, 504, 480, 504, 568, 456, 584, 432, 552, 376, 480, 352, 400, 344, 368, 344, 376, 312, 576, 344, 608, 384, 640, 448, 688, 480, 784, 488, 880, 488, 944, 464, 944, 400, 976, 400, 976, 472, 1000, 496, 1056, 512, 1120, 520)])
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ou003"]
+vertices = PackedVector2Array(1009.77, 573.711, 957.023, 407.961, 985.469, 403.219, 1038.24, 546.453, 1054.23, 658.313, 1025.64, 676.93, 1082.16, 742.102, 1051.86, 729.359, 1294.31, 698.211, 1369.66, 732.461, 1355.71, 755.711, 1297.81, 734, 1239.55, 734, 1138.81, 713.758, 1149.22, 742.211, 1092.7, 770.469, 1038.16, 775.688, 1100.16, 807.828, 1068.14, 813.172, 1043.53, 739.406, 993.93, 758, 982.578, 722, 922.648, 722, 941.641, 758, 866.07, 754.344, 878.32, 789.648, 824.711, 782, 799.992, 746.07, 757.641, 782, 739.43, 753.641, 699.797, 810.922, 685.617, 787.273)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 0, 4, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(8, 11, 12, 13), PackedInt32Array(13, 12, 14, 6), PackedInt32Array(6, 14, 15, 16), PackedInt32Array(15, 17, 18, 16), PackedInt32Array(7, 6, 16, 19), PackedInt32Array(19, 16, 20, 21), PackedInt32Array(22, 21, 20, 23, 24), PackedInt32Array(24, 23, 25, 26), PackedInt32Array(27, 24, 26, 28, 29), PackedInt32Array(29, 28, 30, 31)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1360, 768, 1384, 728, 1296, 688, 1136, 704, 1088, 728, 1064, 656, 1048, 544, 992, 392, 944, 400, 1000, 576, 1016, 680, 1040, 728, 984, 712, 920, 712, 864, 744, 800, 736, 736, 744, 672, 784, 696, 824, 760, 792, 824, 792, 880, 800, 944, 768, 992, 768, 1032, 784, 1064, 824, 1112, 816, 1104, 776, 1152, 752, 1240, 744, 1296, 744)])
 
 [node name="Map" type="NavigationRegion2D"]
-navigation_polygon = SubResource("NavigationPolygon_c4cug")
+navigation_polygon = SubResource("NavigationPolygon_ou003")
 script = ExtResource("1_hdnhf")
 
-[node name="Sprite2D" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1600.0
 offset_bottom = 904.0
-texture = ExtResource("1_cuky3")
+texture = ExtResource("2_tm3h7")
 
 [node name="Navigator" parent="." instance=ExtResource("2_c4cug")]
-position = Vector2(1304, 544)
+position = Vector2(1344, 736)
 
 [node name="locations" type="Control" parent="."]
 layout_mode = 3
@@ -28,40 +28,32 @@ anchors_preset = 0
 
 [node name="Location" parent="locations" instance=ExtResource("4_tm3h7")]
 layout_mode = 1
-offset_left = 783.999
-offset_top = 192.0
-offset_right = 1144.0
-offset_bottom = 552.0
-scene = &"+"
+offset_left = 1296.0
+offset_top = 536.0
+offset_right = 1656.0
+offset_bottom = 896.0
+scene = &"ShipScene"
 
 [node name="Location2" parent="locations" instance=ExtResource("4_tm3h7")]
 layout_mode = 1
-offset_left = 807.999
-offset_top = 504.0
-offset_right = 1168.0
-offset_bottom = 864.0
-scene = &"__Item"
+offset_left = 896.0
+offset_top = 616.0
+offset_right = 1256.0
+offset_bottom = 976.0
+scene = &"BeachScene"
 
 [node name="Location3" parent="locations" instance=ExtResource("4_tm3h7")]
 layout_mode = 1
-offset_left = 167.999
-offset_top = 120.0
-offset_right = 527.999
-offset_bottom = 480.0
-scene = &"__Navigator"
-
-[node name="Location4" parent="locations" instance=ExtResource("4_tm3h7")]
-layout_mode = 1
-offset_left = 15.9994
-offset_top = 424.0
-offset_right = 375.999
-offset_bottom = 784.0
-scene = &"+"
+offset_left = 800.0
+offset_top = 224.0
+offset_right = 1160.0
+offset_bottom = 584.0
+scene = &"MarketScene"
 
 [node name="Location5" parent="locations" instance=ExtResource("4_tm3h7")]
 layout_mode = 1
-offset_left = 1184.0
-offset_top = 360.0
-offset_right = 1544.0
-offset_bottom = 720.0
-scene = &"__Item"
+offset_left = 528.0
+offset_top = 600.0
+offset_right = 888.0
+offset_bottom = 960.0
+scene = &"IslandScene"
