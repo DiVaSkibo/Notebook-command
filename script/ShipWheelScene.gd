@@ -2,9 +2,6 @@ extends Node2D
 
 
 func _ready() -> void:
-	Handler.isDone['upShiushin'] = true
-	Handler.isDone['upBibeni'] = true
-	Handler.isDone['upY'] = true
 	if not Handler.isDone['BiobStart']:
 		Dialogic.start('tlBiobStart')
 		Handler.isDone['BiobStart'] = true

@@ -24,6 +24,7 @@ Handler="*res://script/____Handler.gd"
 Wallet="*res://Scene/___Wallet.tscn"
 Transition="*res://Scene/___Transition.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+AudioStreamer="*res://Scene/___AudioStream.tscn"
 
 [dialogic]
 
@@ -39,12 +40,10 @@ directories/dtl_directory={
 "tlBibeniBucket": "res://Resource/Dialog/tlBibeniBucket.dtl",
 "tlBibeniStart": "res://Resource/Dialog/tlBibeniStart.dtl",
 "tlBibeniUp": "res://Resource/Dialog/tlBibeniUp.dtl",
-"tlBibenizzz": "res://Resource/Dialog/tlBibenizzz.dtl",
 "tlBiobStart": "res://Resource/Dialog/tlBiobStart.dtl",
 "tlBiobUp": "res://Resource/Dialog/tlBiobUp.dtl",
 "tlShiushinStart": "res://Resource/Dialog/tlShiushinStart.dtl",
 "tlShiushinUp": "res://Resource/Dialog/tlShiushinUp.dtl",
-"tlStart": "res://Resource/Dialog/tlStart.dtl",
 "tlYUp": "res://Resource/Dialog/tlYUp.dtl",
 "tlYzzzStart": "res://Resource/Dialog/tlYzzzStart.dtl"
 }

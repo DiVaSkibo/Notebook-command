@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsjy6dsybyuij"]
+
+[ext_resource type="AudioStream" uid="uid://cw4ju5uxa6u8y" path="res://Resource/Audio/music/Double Jump of the Shining Kid (mp3cut.net).mp3" id="1_7x562"]
+[ext_resource type="Script" uid="uid://co2spggqehmt2" path="res://script/___AudioStream.gd" id="1_8i36g"]
+
+[node name="AudioStream" type="AudioStreamPlayer"]
+stream = ExtResource("1_7x562")
+script = ExtResource("1_8i36g")
