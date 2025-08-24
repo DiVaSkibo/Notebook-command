@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://c8m2tiualu7v3"]
+
+[ext_resource type="Texture2D" uid="uid://d1uh43a2lqhln" path="res://Resource/Asset/item/Rum.png" id="1_fk80j"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fk80j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

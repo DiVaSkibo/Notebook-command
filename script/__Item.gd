@@ -47,8 +47,10 @@ func back() -> void:
 	set_deferred('freeze', true)
 
 func use() -> void:
-	used.emit()
+	$Timer.start()
+	await  $Timer.timeout
 	print('\n\t', self, '  |>  ', interactor, '\n')
+	used.emit()
 func put_in() -> void:
 	freeze = false
 	is_focused = false

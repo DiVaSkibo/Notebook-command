@@ -29,6 +29,10 @@ texture = ExtResource("3_2rwoj")
 shape = SubResource("CapsuleShape2D_12m02")
 debug_color = Color(0, 1, 0, 0.0431373)
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="used" from="." to="." method="_on_used"]

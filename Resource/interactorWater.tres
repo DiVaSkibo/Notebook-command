@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="InteractorResource" load_steps=6 format=3 uid="uid://dt3ao1jkejoj3"]
+
+[ext_resource type="Resource" uid="uid://dqmyocw3qmakb" path="res://Resource/itemBucket.tres" id="1_lsegg"]
+[ext_resource type="Script" uid="uid://nitrh56kjirq" path="res://script/____InteractorResource.gd" id="2_ejnvj"]
+[ext_resource type="Texture2D" uid="uid://1g6fomv25s2" path="res://Resource/Asset/background/beachWater.png" id="3_vkgsj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsegg"]
+size = Vector2(656, 1088)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8vqc0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vkgsj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_ejnvj")
+name = &"Water"
+key = ExtResource("1_lsegg")
+result = 2
+sprite_frames = SubResource("SpriteFrames_8vqc0")
+shape = SubResource("RectangleShape2D_lsegg")
+metadata/_custom_type_script = "uid://nitrh56kjirq"
