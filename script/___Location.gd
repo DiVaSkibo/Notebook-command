@@ -17,7 +17,7 @@ func _on_pressed() -> void:
 	navigated.emit(self)
 
 func _on_mouse_entered() -> void:
-	scale += HOVER_SCALE
-func _on_mouse_exited() -> void:
 	scale -= HOVER_SCALE
+func _on_mouse_exited() -> void:
+	scale += HOVER_SCALE
 #endregion

@@ -25,4 +25,5 @@ key = ExtResource("1_lsegg")
 result = 2
 sprite_frames = SubResource("SpriteFrames_8vqc0")
 shape = SubResource("RectangleShape2D_lsegg")
+scale = Vector2(0, 0)
 metadata/_custom_type_script = "uid://nitrh56kjirq"

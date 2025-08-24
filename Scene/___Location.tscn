@@ -1,7 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://cu1fuy5a21i0a"]
+[gd_scene load_steps=2 format=3 uid="uid://cu1fuy5a21i0a"]
 
-[ext_resource type="Texture2D" uid="uid://bk6ieksey7nxg" path="res://Resource/Asset/map/Location.png" id="1_urt62"]
-[ext_resource type="Texture2D" uid="uid://crpipjeahnaib" path="res://icon.svg" id="2_eso7i"]
 [ext_resource type="Script" uid="uid://pagb76e1oyot" path="res://script/___Location.gd" id="3_6h03e"]
 
 [node name="Location" type="TextureButton"]
@@ -12,15 +10,11 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -980.0
 offset_top = -630.0
-offset_right = -620.0
-offset_bottom = -270.0
+offset_right = -980.0
+offset_bottom = -630.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.2, 0.2)
 pivot_offset = Vector2(180, 180)
-texture_normal = ExtResource("1_urt62")
-texture_pressed = ExtResource("2_eso7i")
-stretch_mode = 0
 script = ExtResource("3_6h03e")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
