@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="InteractorResource" load_steps=5 format=3 uid="uid://but85pp2b27t8"]
+
+[ext_resource type="Resource" uid="uid://ccqbqvdoyja6j" path="res://Resource/itemRum.tres" id="1_si8x4"]
+[ext_resource type="Script" uid="uid://nitrh56kjirq" path="res://script/____InteractorResource.gd" id="2_cotlg"]
+[ext_resource type="SpriteFrames" uid="uid://c1c62hrx57eh4" path="res://Resource/Animation/bibeni.tres" id="3_7alix"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_17bc0"]
+radius = 40.0
+height = 256.0
+
+[resource]
+script = ExtResource("2_cotlg")
+name = &"Bibeni"
+key = ExtResource("1_si8x4")
+result = 4
+sprite_frames = ExtResource("3_7alix")
+shape = SubResource("CapsuleShape2D_17bc0")
+scale = Vector2(0.6, 0.6)
+metadata/_custom_type_script = "uid://nitrh56kjirq"

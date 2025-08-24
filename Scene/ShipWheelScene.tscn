@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvlqy7np371ua"]
+[gd_scene load_steps=7 format=3 uid="uid://dvlqy7np371ua"]
 
 [ext_resource type="Texture2D" uid="uid://f2fysyukjqdo" path="res://Resource/Asset/background/shipWheel.png" id="1_tgpij"]
 [ext_resource type="PackedScene" uid="uid://11uvw53sn2h" path="res://Scene/___phisic_area.tscn" id="2_ydt8f"]
 [ext_resource type="PackedScene" uid="uid://bxp8xggfdkxe8" path="res://Scene/__Fiuf.tscn" id="3_ojg7e"]
 [ext_resource type="PackedScene" uid="uid://cgd4eoxo8eqlm" path="res://Scene/__Pirate.tscn" id="3_ydt8f"]
+[ext_resource type="Resource" uid="uid://b7k3d2ytd74lu" path="res://Resource/pirateBiob.tres" id="4_ojg7e"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ydt8f"]
 normal = Vector2(-1, 0)
@@ -29,6 +30,7 @@ debug_color = Color(1, 1, 1, 1)
 
 [node name="Pirate" parent="." instance=ExtResource("3_ydt8f")]
 position = Vector2(1088, 664)
+resource = ExtResource("4_ojg7e")
 
 [node name="Fiuf" parent="." instance=ExtResource("3_ojg7e")]
 position = Vector2(384, 640)

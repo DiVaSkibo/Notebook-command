@@ -18,6 +18,13 @@ const ITEMS :Dictionary = {
 	'bucket': preload('res://Resource/itemBucket.tres'),
 	'bucket+water': preload('res://Resource/itemBucket+water.tres')
 }
+const PIRATE := preload('res://Scene/__Pirate.tscn')
+const PIRATES :Dictionary = {
+	'Biob': preload('res://Resource/pirateBiob.tres'),
+	'Shiushin': preload('res://Resource/pirateShiushin.tres'),
+	'Bibeni': preload('res://Resource/pirateBibeni.tres'),
+	'Y': preload('res://Resource/pirateY.tres')
+}
 
 var scene :
 	set(x): get_tree().change_scene_to_packed(SCENES[x])

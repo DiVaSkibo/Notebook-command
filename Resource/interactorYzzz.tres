@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="InteractorResource" load_steps=5 format=3 uid="uid://hboilfd43cte"]
+
+[ext_resource type="Resource" uid="uid://c6lec34preqcl" path="res://Resource/itemBucket+water.tres" id="1_ahudu"]
+[ext_resource type="Script" uid="uid://nitrh56kjirq" path="res://script/____InteractorResource.gd" id="2_5svpf"]
+[ext_resource type="SpriteFrames" uid="uid://h2ov4n7o7eqp" path="res://Resource/Animation/yzzz.tres" id="3_xbuo8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aljv5"]
+radius = 190.0
+
+[resource]
+script = ExtResource("2_5svpf")
+name = &"Yzzz"
+key = ExtResource("1_ahudu")
+result = 3
+sprite_frames = ExtResource("3_xbuo8")
+shape = SubResource("CircleShape2D_aljv5")
+scale = Vector2(0.6, 0.6)
+metadata/_custom_type_script = "uid://nitrh56kjirq"

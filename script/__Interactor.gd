@@ -27,9 +27,8 @@ func _on_interacted(by :Item):
 	if by.resource == key:
 		by.use()
 		await by.used
-		if result in [InteractorResource.Result.coin, InteractorResource.Result.rum, InteractorResource.Result.bucket_water]:
-			lead.call(result, position)
-		else: lead.call(result)
+		lead.call(result, position)
+		queue_free()
 	else:
 		by.put_in()
 	if not name.begins_with('Water'): scale += HOVER_SCALE

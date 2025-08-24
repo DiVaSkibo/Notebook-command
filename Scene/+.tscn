@@ -7,9 +7,9 @@
 [ext_resource type="Resource" uid="uid://dqmyocw3qmakb" path="res://Resource/itemBucket.tres" id="3_b0uks"]
 [ext_resource type="Resource" uid="uid://dt3ao1jkejoj3" path="res://Resource/interactorWater.tres" id="4_en0do"]
 [ext_resource type="Resource" uid="uid://ccqbqvdoyja6j" path="res://Resource/itemRum.tres" id="4_itlmv"]
-[ext_resource type="Resource" uid="uid://iko6hapeb72" path="res://Resource/interactorSnake.tres" id="4_po7qf"]
-[ext_resource type="Resource" uid="uid://cngwik3t40jev" path="res://Resource/interactorRum.tres" id="5_0nito"]
+[ext_resource type="Resource" uid="uid://but85pp2b27t8" path="res://Resource/interactorBibeni.tres" id="5_en0do"]
 [ext_resource type="Resource" uid="uid://d3d426if74gdh" path="res://Resource/itemCoin.tres" id="5_f37ww"]
+[ext_resource type="Resource" uid="uid://hboilfd43cte" path="res://Resource/interactorYzzz.tres" id="6_fdk5b"]
 [ext_resource type="PackedScene" uid="uid://bxp8xggfdkxe8" path="res://Scene/__Fiuf.tscn" id="7_f37ww"]
 [ext_resource type="Resource" uid="uid://dhdvoha6a75lj" path="res://Resource/itemFlute.tres" id="9_v3v17"]
 
@@ -24,11 +24,11 @@ resource = ExtResource("4_en0do")
 
 [node name="Interactor" parent="." instance=ExtResource("2_itlmv")]
 position = Vector2(1216, 640)
-resource = ExtResource("4_po7qf")
+resource = ExtResource("5_en0do")
 
 [node name="Interactor2" parent="." instance=ExtResource("2_itlmv")]
 position = Vector2(1024, 640)
-resource = ExtResource("5_0nito")
+resource = ExtResource("6_fdk5b")
 
 [node name="Fiuf" parent="." instance=ExtResource("7_f37ww")]
 position = Vector2(384, 640)
@@ -36,9 +36,6 @@ position = Vector2(384, 640)
 [node name="Item" parent="." instance=ExtResource("1_asc53")]
 position = Vector2(192, 288)
 resource = ExtResource("3_b0uks")
-
-[node name="Item2" parent="." instance=ExtResource("1_asc53")]
-position = Vector2(448, 288)
 
 [node name="Item3" parent="." instance=ExtResource("1_asc53")]
 position = Vector2(704, 288)
@@ -51,9 +48,3 @@ resource = ExtResource("5_f37ww")
 [node name="Item5" parent="." instance=ExtResource("1_asc53")]
 position = Vector2(1216, 288)
 resource = ExtResource("9_v3v17")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
-autostart = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

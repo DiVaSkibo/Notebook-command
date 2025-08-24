@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c28ajc76tvb0r"]
+[gd_scene load_steps=5 format=3 uid="uid://c28ajc76tvb0r"]
 
 [ext_resource type="Script" uid="uid://cwcbpbfrqrcw7" path="res://script/__Item.gd" id="1_q6waq"]
-[ext_resource type="Resource" uid="uid://c6lec34preqcl" path="res://Resource/itemBucket+water.tres" id="2_2rwoj"]
 [ext_resource type="Texture2D" uid="uid://drxgeqjchkbyk" path="res://Resource/Asset/item/Bucket+water.png" id="3_2rwoj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2rwoj"]
@@ -19,7 +18,6 @@ physics_material_override = SubResource("PhysicsMaterial_2rwoj")
 freeze = true
 freeze_mode = 1
 script = ExtResource("1_q6waq")
-resource = ExtResource("2_2rwoj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
