@@ -1,14 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://bt450mc7wr8v"]
+[gd_scene load_steps=10 format=3 uid="uid://bt450mc7wr8v"]
 
 [ext_resource type="Texture2D" uid="uid://bi73ymgaip8ml" path="res://Resource/Asset/background/shipDeck.png" id="1_j0et4"]
+[ext_resource type="Script" uid="uid://dr334akrsn68p" path="res://script/ShipScene.gd" id="1_s7ua2"]
 [ext_resource type="PackedScene" uid="uid://11uvw53sn2h" path="res://Scene/___phisic_area.tscn" id="2_jaqny"]
 [ext_resource type="PackedScene" uid="uid://bxp8xggfdkxe8" path="res://Scene/__Fiuf.tscn" id="3_gy5k4"]
 [ext_resource type="PackedScene" uid="uid://c28ajc76tvb0r" path="res://Scene/__Item.tscn" id="3_utg8m"]
 [ext_resource type="Resource" uid="uid://dhdvoha6a75lj" path="res://Resource/itemFlute.tres" id="4_bxrlc"]
 [ext_resource type="PackedScene" uid="uid://cgd4eoxo8eqlm" path="res://Scene/__Pirate.tscn" id="5_ffcpo"]
 [ext_resource type="Resource" uid="uid://bufpkp3jdva1v" path="res://Resource/pirateBibeni.tres" id="6_s7ua2"]
+[ext_resource type="Resource" uid="uid://dqmyocw3qmakb" path="res://Resource/itemBucket.tres" id="6_xgnsg"]
 
 [node name="ShipScene" type="Node2D"]
+script = ExtResource("1_s7ua2")
 
 [node name="ship" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -22,6 +25,10 @@ right_scene = &"ShipWheelScene"
 [node name="Item" parent="." instance=ExtResource("3_utg8m")]
 position = Vector2(1712, 472)
 resource = ExtResource("4_bxrlc")
+
+[node name="Item2" parent="." instance=ExtResource("3_utg8m")]
+position = Vector2(1712, 472)
+resource = ExtResource("6_xgnsg")
 
 [node name="Pirate" parent="." instance=ExtResource("5_ffcpo")]
 position = Vector2(608, 336)

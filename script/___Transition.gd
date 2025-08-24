@@ -11,6 +11,12 @@ func _ready() -> void:
 	tween.tween_callback(hide)
 	print('\n\t\t' + '_'.repeat(Handler.scene.name.length() + 4) + '\n\t\t| ', Handler.scene.name, ' |\n')
 
+func quit() -> void:
+	show()
+	if tween: tween.kill()
+	tween = create_tween()
+	tween.chain().tween_property(self, 'color:a', 1, DURATION / 2)
+	tween.chain().tween_callback(get_tree().quit)
 func switch(to :StringName) -> void:
 	show()
 	Handler.prev_scene = Handler.scene.name

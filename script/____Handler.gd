@@ -8,7 +8,8 @@ const SCENES :Dictionary = {
 	'ShipBowspritScene': preload('res://Scene/ShipBowspritScene.tscn'),
 	'BeachScene': preload('res://Scene/BeachScene.tscn'),
 	'MarketScene': preload('res://Scene/MarketScene.tscn'),
-	'IslandScene': preload('res://Scene/IslandScene.tscn')
+	'IslandScene': preload('res://Scene/IslandScene.tscn'),
+	'Final': preload('res://Scene/Final.tscn')
 }
 const ITEM := preload('res://Scene/__Item.tscn')
 const ITEMS :Dictionary = {
@@ -28,6 +29,7 @@ const PIRATES :Dictionary = {
 
 @export var isDone :Dictionary = {
 	'BiobStart': false,
+	'gotFlute': false,
 	'YzzzStart': false,
 	'BibeniStart': false,
 	'ShiushinStart': false,
@@ -47,4 +49,7 @@ var prev_scene :StringName
 	#region	Funcs
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed('EXIT'): get_tree().quit()
+
+func sail() -> void:
+	Transition.switch('Final')
 #endregion

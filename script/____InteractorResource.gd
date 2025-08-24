@@ -19,6 +19,7 @@ func lead(to :Result, on :Vector2 = Vector2.ZERO) -> void:
 		Result.rum:
 			object.resource = Handler.ITEMS['rum']
 			Handler.isDone['boughtRum'] = true
+			Handler.isDone['upShiushin'] = true
 		Result.bucket_water: object.resource = Handler.ITEMS['bucket+water']
 		Result.upbibeni:
 			object.resource = Handler.PIRATES['Bibeni']

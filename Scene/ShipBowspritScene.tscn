@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://ekttktxh6y23"]
+[gd_scene load_steps=8 format=3 uid="uid://ekttktxh6y23"]
 
+[ext_resource type="Script" uid="uid://cx7w2y3ar2260" path="res://script/ShipBowspritScene.gd" id="1_4och2"]
 [ext_resource type="Texture2D" uid="uid://ekxxhd82ycyp" path="res://Resource/Asset/background/shipBowsprit.png" id="1_qyx3x"]
 [ext_resource type="PackedScene" uid="uid://11uvw53sn2h" path="res://Scene/___phisic_area.tscn" id="2_u02qq"]
 [ext_resource type="PackedScene" uid="uid://bxp8xggfdkxe8" path="res://Scene/__Fiuf.tscn" id="3_383qt"]
@@ -10,6 +11,7 @@
 normal = Vector2(0.127971, -0.991778)
 
 [node name="ShipBowspritScene" type="Node2D"]
+script = ExtResource("1_4och2")
 
 [node name="ship" type="TextureRect" parent="."]
 offset_right = 40.0

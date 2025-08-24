@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cchpvxvf38lt8"]
+
+[ext_resource type="Texture2D" uid="uid://cu3pvonuc64fw" path="res://Resource/Asset/background/final.png" id="1_i2t0x"]
+[ext_resource type="Script" uid="uid://csptr33txj2om" path="res://script/Final.gd" id="1_pk7tp"]
+[ext_resource type="Texture2D" uid="uid://cila8kdvrpcgm" path="res://Resource/Asset/character/chest00.png" id="2_pk7tp"]
+[ext_resource type="Texture2D" uid="uid://c4i7sygqr68bi" path="res://Resource/Asset/character/chest01.png" id="3_xsm8a"]
+[ext_resource type="Texture2D" uid="uid://cg7xyr747mqht" path="res://Resource/Asset/character/chest02.png" id="4_p03ml"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nha5q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pk7tp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xsm8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p03ml")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Final" type="Node2D"]
+script = ExtResource("1_pk7tp")
+
+[node name="team" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_i2t0x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 856)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_nha5q")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true

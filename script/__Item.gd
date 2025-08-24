@@ -38,7 +38,10 @@ func _input(event: InputEvent) -> void:
 		if is_collected:
 			Wallet.item_taken.emit(self)
 			is_hold = true
-		else: put_in()
+		else:
+			if name.begins_with('Flute'): Handler.isDone['gotFlute'] = true
+			elif name.begins_with('Bucket'): Handler.isDone['gotBucket'] = true
+			put_in()
 
 func back() -> void:
 	position = Vector2.ZERO
