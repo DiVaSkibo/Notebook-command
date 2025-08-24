@@ -1,6 +1,6 @@
 extends ColorRect
 
-const DURATION := 3.
+const DURATION := 2.
 
 @onready var tween :Tween
 
