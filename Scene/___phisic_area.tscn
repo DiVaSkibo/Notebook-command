@@ -16,7 +16,7 @@ left_scene = &"MapScene"
 right_scene = &"MapScene"
 
 [node name="floor" type="StaticBody2D" parent="."]
-position = Vector2(780, 704)
+position = Vector2(960, 832)
 collision_layer = 2
 collision_mask = 0
 
@@ -35,7 +35,7 @@ shape = SubResource("WorldBoundaryShape2D_25cba")
 debug_color = Color(1, 1, 1, 1)
 
 [node name="rightArea" type="Area2D" parent="."]
-position = Vector2(1728, 0)
+position = Vector2(2048, 0)
 collision_layer = 2
 collision_mask = 2
 monitorable = false

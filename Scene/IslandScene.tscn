@@ -25,4 +25,4 @@ position = Vector2(1544, 624)
 resource = ExtResource("4_no7s0")
 
 [node name="Fiuf" parent="." instance=ExtResource("5_fnixq")]
-position = Vector2(448, 640)
+position = Vector2(576, 768)

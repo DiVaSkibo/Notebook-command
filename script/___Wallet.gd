@@ -18,6 +18,7 @@ static var _index := -1:
 @onready var center_conteiner := $CenterContainer as CenterContainer
 @onready var listview := $CenterContainer/ListView as HBoxContainer
 @onready var animation_player := $AnimationPlayer as AnimationPlayer
+@onready var pocket := $Pocket as TextureButton
 #endregion
 
 	#region	Funcs
@@ -54,6 +55,7 @@ func _on_item_taken(item :Item):
 func _on_pocket_pressed() -> void:
 	is_shown = not is_shown
 	await animation_player.animation_finished
+
 func _on_put_in_area_body_entered(body: Node2D) -> void:
 	if body is not Item: return
 	append(body)

@@ -16,8 +16,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_i6qch")
 
-[node name="PhisicArea" parent="." instance=ExtResource("3_3qkuh")]
-
 [node name="Pirate" parent="." instance=ExtResource("4_vx7e6")]
 position = Vector2(848, 592)
 resource = ExtResource("5_lm1gn")
@@ -27,9 +25,11 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_lm1gn")
 
+[node name="PhisicArea" parent="." instance=ExtResource("3_3qkuh")]
+
 [node name="Interactor" parent="." instance=ExtResource("6_vx7e6")]
 position = Vector2(1216, 616)
 resource = ExtResource("7_xap10")
 
 [node name="Fiuf" parent="." instance=ExtResource("5_xap10")]
-position = Vector2(376, 640)
+position = Vector2(376, 768)

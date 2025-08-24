@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://m78kv4rekawj"]
+[gd_scene load_steps=8 format=3 uid="uid://m78kv4rekawj"]
 
 [ext_resource type="Texture2D" uid="uid://bbb5wgbepodhm" path="res://Resource/Asset/background/beach.png" id="1_f52rm"]
 [ext_resource type="PackedScene" uid="uid://11uvw53sn2h" path="res://Scene/___phisic_area.tscn" id="2_mtvbk"]
@@ -6,8 +6,6 @@
 [ext_resource type="Resource" uid="uid://dt3ao1jkejoj3" path="res://Resource/interactorWater.tres" id="4_33l4d"]
 [ext_resource type="Resource" uid="uid://hboilfd43cte" path="res://Resource/interactorYzzz.tres" id="5_dfdet"]
 [ext_resource type="PackedScene" uid="uid://bxp8xggfdkxe8" path="res://Scene/__Fiuf.tscn" id="5_mtvbk"]
-[ext_resource type="PackedScene" uid="uid://c28ajc76tvb0r" path="res://Scene/__Item.tscn" id="6_33l4d"]
-[ext_resource type="Resource" uid="uid://dqmyocw3qmakb" path="res://Resource/itemBucket.tres" id="7_t825t"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mtvbk"]
 normal = Vector2(1, 0)
@@ -38,8 +36,5 @@ resource = ExtResource("4_33l4d")
 position = Vector2(1536, 320)
 resource = ExtResource("5_dfdet")
 
-[node name="Item" parent="." instance=ExtResource("6_33l4d")]
-resource = ExtResource("7_t825t")
-
 [node name="Fiuf" parent="." instance=ExtResource("5_mtvbk")]
-position = Vector2(960, 640)
+position = Vector2(1088, 768)

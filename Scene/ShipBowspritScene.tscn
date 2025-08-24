@@ -33,4 +33,4 @@ position = Vector2(632, 584)
 resource = ExtResource("5_4och2")
 
 [node name="Fiuf" parent="." instance=ExtResource("3_383qt")]
-position = Vector2(1536, 640)
+position = Vector2(1536, 768)

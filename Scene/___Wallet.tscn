@@ -1,9 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://cymnifrwr5msq"]
+[gd_scene load_steps=9 format=3 uid="uid://cymnifrwr5msq"]
 
 [ext_resource type="Script" uid="uid://c8ejmronni24g" path="res://script/___Wallet.gd" id="1_ifawl"]
-[ext_resource type="Texture2D" uid="uid://dl28e7a7simxl" path="res://Resource/Asset/item/Wallet.png" id="2_xob30"]
+[ext_resource type="Script" uid="uid://b2rh0rg7q4fv2" path="res://script/___SpriteButton.gd" id="2_xob30"]
+[ext_resource type="Texture2D" uid="uid://dl28e7a7simxl" path="res://Resource/Asset/item/Wallet.png" id="3_cq288"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xob30"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ix3f0"]
+radius = 56.0
 
 [sub_resource type="Animation" id="Animation_xob30"]
 length = 0.001
@@ -45,7 +49,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 960), Vector2(0, 772)]
+"values": [Vector2(0, 1120), Vector2(0, 864)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -78,7 +82,7 @@ mouse_filter = 2
 script = ExtResource("1_ifawl")
 
 [node name="PutInArea" type="Area2D" parent="."]
-position = Vector2(0, 1111)
+position = Vector2(0, 1288)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PutInArea"]
 shape = SubResource("WorldBoundaryShape2D_xob30")
@@ -91,8 +95,8 @@ anchors_preset = -1
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 60.0
-offset_bottom = 188.0
+offset_top = -120.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -101,14 +105,18 @@ layout_mode = 2
 theme_override_constants/separation = 200
 alignment = 1
 
-[node name="Pocket" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 768.0
-offset_right = 256.0
-offset_bottom = 896.0
+[node name="Pocket" type="Area2D" parent="."]
+position = Vector2(192, 928)
+monitorable = false
+script = ExtResource("2_xob30")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pocket"]
 scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("2_xob30")
+texture = ExtResource("3_cq288")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pocket"]
+shape = SubResource("CircleShape2D_ix3f0")
+debug_color = Color(1, 0.988235, 0, 0.0431373)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -117,4 +125,7 @@ libraries = {
 
 [connection signal="item_taken" from="." to="." method="_on_item_taken"]
 [connection signal="body_entered" from="PutInArea" to="." method="_on_put_in_area_body_entered"]
+[connection signal="mouse_entered" from="Pocket" to="Pocket" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Pocket" to="Pocket" method="_on_mouse_exited"]
 [connection signal="pressed" from="Pocket" to="." method="_on_pocket_pressed"]
+[connection signal="pressed" from="Pocket" to="Pocket" method="_on_pressed"]
