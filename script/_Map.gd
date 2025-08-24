@@ -1,4 +1,4 @@
-extends NavigationRegion2D
+class_name Map extends NavigationRegion2D
 
 	#region	Vars
 @onready var navigator := $Navigator as Navigator

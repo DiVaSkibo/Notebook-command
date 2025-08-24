@@ -5,13 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://b3g5s3uv318vg" path="res://Resource/Asset/map/roads.png" id="2_tm3h7"]
 [ext_resource type="PackedScene" uid="uid://cu1fuy5a21i0a" path="res://Scene/___Location.tscn" id="4_tm3h7"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_ou003"]
-vertices = PackedVector2Array(1009.77, 573.711, 957.023, 407.961, 985.469, 403.219, 1038.24, 546.453, 1054.23, 658.313, 1025.64, 676.93, 1082.16, 742.102, 1051.86, 729.359, 1294.31, 698.211, 1369.66, 732.461, 1355.71, 755.711, 1297.81, 734, 1239.55, 734, 1138.81, 713.758, 1149.22, 742.211, 1092.7, 770.469, 1038.16, 775.688, 1100.16, 807.828, 1068.14, 813.172, 1043.53, 739.406, 993.93, 758, 982.578, 722, 922.648, 722, 941.641, 758, 866.07, 754.344, 878.32, 789.648, 824.711, 782, 799.992, 746.07, 757.641, 782, 739.43, 753.641, 699.797, 810.922, 685.617, 787.273)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 0, 4, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(8, 11, 12, 13), PackedInt32Array(13, 12, 14, 6), PackedInt32Array(6, 14, 15, 16), PackedInt32Array(15, 17, 18, 16), PackedInt32Array(7, 6, 16, 19), PackedInt32Array(19, 16, 20, 21), PackedInt32Array(22, 21, 20, 23, 24), PackedInt32Array(24, 23, 25, 26), PackedInt32Array(27, 24, 26, 28, 29), PackedInt32Array(29, 28, 30, 31)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(1360, 768, 1384, 728, 1296, 688, 1136, 704, 1088, 728, 1064, 656, 1048, 544, 992, 392, 944, 400, 1000, 576, 1016, 680, 1040, 728, 984, 712, 920, 712, 864, 744, 800, 736, 736, 744, 672, 784, 696, 824, 760, 792, 824, 792, 880, 800, 944, 768, 992, 768, 1032, 784, 1064, 824, 1112, 816, 1104, 776, 1152, 752, 1240, 744, 1296, 744)])
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_tm3h7"]
+vertices = PackedVector2Array(1311.4, 714, 1346.47, 737.383, 1336.75, 734.141, 1304.47, 718, 978.063, 439.992, 981.023, 427.523, 990.109, 464.688, 985.898, 471.367, 1248.13, 714, 1271.91, 718, 1183.63, 726.031, 1176.26, 721.977, 1127.2, 742.148, 1136.65, 729.898, 1089.17, 753.641, 1086.59, 766.523, 1079.45, 763.383, 727.531, 782, 716.82, 782, 729.172, 769.648, 743.422, 774.047, 744.469, 762, 998.133, 480.742, 1001.88, 511.313, 1030.04, 584.43, 1025.97, 583.594, 1033.95, 671.438, 1038.03, 640.344, 1046.09, 680.648, 1057.89, 719.297, 1054.14, 696.75, 1070.15, 744.773, 1066.21, 752.609, 816.031, 765.977, 784.25, 762, 815.906, 754.078, 839.68, 762, 871.656, 773.93, 880.469, 762, 935.531, 742, 928.688, 737.891, 960.102, 730.031, 992.32, 742, 1015.32, 737.922, 1016.84, 750.172, 1056.31, 762.523, 1057.24, 774.406, 1071.68, 788.859)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(0, 2, 3), PackedInt32Array(4, 5, 6), PackedInt32Array(7, 4, 6), PackedInt32Array(8, 0, 3), PackedInt32Array(8, 3, 9), PackedInt32Array(8, 9, 10), PackedInt32Array(11, 8, 10), PackedInt32Array(11, 10, 12), PackedInt32Array(13, 11, 12), PackedInt32Array(14, 13, 12), PackedInt32Array(14, 12, 15), PackedInt32Array(16, 14, 15), PackedInt32Array(17, 18, 19), PackedInt32Array(20, 17, 19), PackedInt32Array(20, 19, 21), PackedInt32Array(7, 6, 22), PackedInt32Array(23, 7, 22), PackedInt32Array(23, 22, 24), PackedInt32Array(25, 23, 24), PackedInt32Array(26, 25, 24), PackedInt32Array(26, 24, 27), PackedInt32Array(26, 27, 28), PackedInt32Array(29, 26, 28), PackedInt32Array(29, 28, 30), PackedInt32Array(29, 30, 31), PackedInt32Array(32, 29, 31), PackedInt32Array(32, 31, 16), PackedInt32Array(33, 20, 21), PackedInt32Array(33, 21, 34), PackedInt32Array(33, 34, 35), PackedInt32Array(33, 35, 36), PackedInt32Array(37, 33, 36), PackedInt32Array(37, 36, 38), PackedInt32Array(39, 37, 38), PackedInt32Array(39, 38, 40), PackedInt32Array(39, 40, 41), PackedInt32Array(42, 39, 41), PackedInt32Array(42, 41, 43), PackedInt32Array(44, 42, 43), PackedInt32Array(44, 43, 45), PackedInt32Array(46, 44, 45), PackedInt32Array(15, 47, 46), PackedInt32Array(16, 15, 46), PackedInt32Array(32, 16, 46), PackedInt32Array(32, 46, 45)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1360, 744, 1312, 712, 1248, 712, 1176, 720, 1136, 728, 1088, 752, 1080, 760, 1080, 760, 1072, 744, 1056, 696, 1048, 680, 1040, 640, 1032, 584, 1000, 480, 992, 464, 981, 419, 976, 440, 984, 472, 1000, 512, 1024, 584, 1032, 672, 1056, 720, 1064, 752, 1056, 760, 1016, 736, 960, 728, 928, 736, 880, 760, 840, 760, 816, 752, 784, 760, 744, 760, 728, 768, 712, 784, 728, 784, 744, 776, 816, 768, 872, 776, 936, 744, 992, 744, 1016, 752, 1056, 776, 1072, 792, 1088, 768, 1128, 744, 1184, 728, 1272, 720, 1304, 720, 1336, 736)])
+sample_partition_type = 1
+agent_radius = 2.0
 
 [node name="Map" type="NavigationRegion2D"]
-navigation_polygon = SubResource("NavigationPolygon_ou003")
+navigation_polygon = SubResource("NavigationPolygon_tm3h7")
+use_edge_connections = false
 script = ExtResource("1_hdnhf")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -33,6 +36,9 @@ offset_top = 536.0
 offset_right = 1656.0
 offset_bottom = 896.0
 scene = &"ShipScene"
+
+[node name="Marker2D" type="Marker2D" parent="locations/Location"]
+position = Vector2(-480, 280)
 
 [node name="Location2" parent="locations" instance=ExtResource("4_tm3h7")]
 layout_mode = 1
