@@ -8,7 +8,7 @@ height = 220.0
 
 [resource]
 script = ExtResource("1_wajy0")
-name = "Y"
+name = &"Y"
 sprite = ExtResource("2_l0loq")
 shape = SubResource("CapsuleShape2D_7bj2a")
 metadata/_custom_type_script = "uid://crhhlebjqgdw"

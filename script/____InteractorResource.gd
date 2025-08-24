@@ -1,6 +1,6 @@
 class_name InteractorResource extends Resource
 
-enum Result { coin, rum, bucket_water, upyi, upbibeni }
+enum Result { coin, rum, bucket_water, upbibeni, upyi }
 
 @export var name :StringName
 @export var key :ItemResource
@@ -16,9 +16,15 @@ func lead(to :Result, on :Vector2 = Vector2.ZERO) -> void:
 	else: object = Handler.PIRATE.instantiate()
 	match to:
 		Result.coin: object.resource = Handler.ITEMS['coin']
-		Result.rum: object.resource = Handler.ITEMS['rum']
+		Result.rum:
+			object.resource = Handler.ITEMS['rum']
+			Handler.isDone['boughtRum'] = true
 		Result.bucket_water: object.resource = Handler.ITEMS['bucket+water']
-		Result.upyi: object.resource = Handler.PIRATES['Y']
-		Result.upbibeni: object.resource = Handler.PIRATES['Bibeni']
+		Result.upbibeni:
+			object.resource = Handler.PIRATES['Bibeni']
+			Handler.isDone['upBibeni'] = true
+		Result.upyi:
+			object.resource = Handler.PIRATES['Y']
+			Handler.isDone['upY'] = true
 	object.position = on
 	Handler.scene.add_child(object)

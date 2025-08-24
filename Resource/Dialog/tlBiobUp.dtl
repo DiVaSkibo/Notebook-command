@@ -1,0 +1,8 @@
+if {IsTeamUp} == true:
+	chFiuf: Team is ready, captain!
+	chBiob: Good job my friend!
+	chBiob: Let`s sail!
+else:
+	chBiob: Team is not full yet!
+	chFiuf: I know, captain!
+	chFiuf: I work on it, captain!

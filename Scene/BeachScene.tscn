@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://m78kv4rekawj"]
+[gd_scene load_steps=9 format=3 uid="uid://m78kv4rekawj"]
 
+[ext_resource type="Script" uid="uid://0merd83nr0nu" path="res://script/BeachScene.gd" id="1_33l4d"]
 [ext_resource type="Texture2D" uid="uid://bbb5wgbepodhm" path="res://Resource/Asset/background/beach.png" id="1_f52rm"]
 [ext_resource type="PackedScene" uid="uid://11uvw53sn2h" path="res://Scene/___phisic_area.tscn" id="2_mtvbk"]
 [ext_resource type="PackedScene" uid="uid://dui626cl3n5lj" path="res://Scene/__Interactor.tscn" id="3_dfdet"]
@@ -11,6 +12,7 @@
 normal = Vector2(1, 0)
 
 [node name="BeachScene" type="Node2D"]
+script = ExtResource("1_33l4d")
 
 [node name="beach" type="TextureRect" parent="."]
 offset_right = 40.0

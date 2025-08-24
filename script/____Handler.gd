@@ -26,6 +26,18 @@ const PIRATES :Dictionary = {
 	'Y': preload('res://Resource/pirateY.tres')
 }
 
+@export var isDone :Dictionary = {
+	'BiobStart': false,
+	'YzzzStart': false,
+	'BibeniStart': false,
+	'ShiushinStart': false,
+	'boughtRum': false,
+	'gotBucket': false,
+	'upShiushin': false,
+	'upBibeni': false,
+	'upY': false,
+}
+
 var scene :
 	set(x): get_tree().change_scene_to_packed(SCENES[x])
 	get: return get_tree().current_scene

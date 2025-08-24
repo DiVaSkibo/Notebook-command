@@ -8,6 +8,7 @@ radius = 24.0
 height = 192.0
 
 [node name="Pirate" type="CharacterBody2D"]
+input_pickable = true
 script = ExtResource("1_8bugv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -17,3 +18,6 @@ texture = ExtResource("3_eqe1w")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_8bugv")
 debug_color = Color(0.642592, 0, 1, 0.0431373)
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

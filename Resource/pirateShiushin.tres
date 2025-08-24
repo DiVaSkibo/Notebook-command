@@ -9,7 +9,7 @@ height = 192.0
 
 [resource]
 script = ExtResource("1_4bcfp")
-name = "Shiushin"
+name = &"Shiushin"
 sprite = ExtResource("2_lvgid")
 shape = SubResource("CapsuleShape2D_a30nw")
 metadata/_custom_type_script = "uid://crhhlebjqgdw"

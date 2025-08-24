@@ -28,13 +28,31 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"chBibeni": "res://Resource/Dialog/chBibeni.dch",
 "chBiob": "res://Resource/Dialog/chBiob.dch",
+"chFiuf": "res://Resource/Dialog/chFiuf.dch",
+"chShiushin": "res://Resource/Dialog/chShiushin.dch",
+"chY": "res://Resource/Dialog/chY.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
-directories/dtl_directory={}
-layout/style_list=[]
-layout/default_style="Default"
-variables={}
+directories/dtl_directory={
+"tlBibeniBucket": "res://Resource/Dialog/tlBibeniBucket.dtl",
+"tlBibeniStart": "res://Resource/Dialog/tlBibeniStart.dtl",
+"tlBibeniUp": "res://Resource/Dialog/tlBibeniUp.dtl",
+"tlBibenizzz": "res://Resource/Dialog/tlBibenizzz.dtl",
+"tlBiobStart": "res://Resource/Dialog/tlBiobStart.dtl",
+"tlBiobUp": "res://Resource/Dialog/tlBiobUp.dtl",
+"tlShiushinStart": "res://Resource/Dialog/tlShiushinStart.dtl",
+"tlShiushinUp": "res://Resource/Dialog/tlShiushinUp.dtl",
+"tlStart": "res://Resource/Dialog/tlStart.dtl",
+"tlYUp": "res://Resource/Dialog/tlYUp.dtl",
+"tlYzzzStart": "res://Resource/Dialog/tlYzzzStart.dtl"
+}
+layout/style_list=["res://Resource/Dialog/pirateStyle.tres"]
+layout/default_style="res://Resource/Dialog/pirateStyle.tres"
+variables={
+"IsTeamUp": false
+}
 text/letter_speed=0.01
 audio/max_channels=4.0
 choices/autofocus_first=true

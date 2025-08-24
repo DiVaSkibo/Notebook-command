@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cchr3ex55lvmr"]
+[gd_scene load_steps=8 format=3 uid="uid://cchr3ex55lvmr"]
 
+[ext_resource type="Script" uid="uid://c48r47n2gsyqj" path="res://script/IslandScene.gd" id="1_ayp61"]
 [ext_resource type="Texture2D" uid="uid://1y77ftyd4sxt" path="res://Resource/Asset/background/bench.png" id="1_q501w"]
 [ext_resource type="PackedScene" uid="uid://11uvw53sn2h" path="res://Scene/___phisic_area.tscn" id="2_qskwc"]
 [ext_resource type="PackedScene" uid="uid://dui626cl3n5lj" path="res://Scene/__Interactor.tscn" id="3_ayp61"]
@@ -8,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bxp8xggfdkxe8" path="res://Scene/__Fiuf.tscn" id="5_fnixq"]
 
 [node name="IslandScene" type="Node2D"]
+script = ExtResource("1_ayp61")
 
 [node name="field" type="TextureRect" parent="."]
 offset_right = 40.0

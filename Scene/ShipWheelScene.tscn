@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvlqy7np371ua"]
+[gd_scene load_steps=8 format=3 uid="uid://dvlqy7np371ua"]
 
+[ext_resource type="Script" uid="uid://dyar0cr71old4" path="res://script/ShipWheelScene.gd" id="1_87ema"]
 [ext_resource type="Texture2D" uid="uid://f2fysyukjqdo" path="res://Resource/Asset/background/shipWheel.png" id="1_tgpij"]
 [ext_resource type="PackedScene" uid="uid://11uvw53sn2h" path="res://Scene/___phisic_area.tscn" id="2_ydt8f"]
 [ext_resource type="PackedScene" uid="uid://bxp8xggfdkxe8" path="res://Scene/__Fiuf.tscn" id="3_ojg7e"]
@@ -10,6 +11,7 @@
 normal = Vector2(-1, 0)
 
 [node name="ShipWheelScene" type="Node2D"]
+script = ExtResource("1_87ema")
 
 [node name="ship" type="TextureRect" parent="."]
 offset_right = 40.0

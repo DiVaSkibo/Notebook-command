@@ -9,7 +9,7 @@ height = 128.0
 
 [resource]
 script = ExtResource("1_du5v4")
-name = "Bibeni"
+name = &"Bibeni"
 sprite = ExtResource("2_f4xpw")
 shape = SubResource("CapsuleShape2D_0qoro")
 metadata/_custom_type_script = "uid://crhhlebjqgdw"
