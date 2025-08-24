@@ -1,5 +1,6 @@
 extends Node
 
+	#region	Vars
 const SCENES :Dictionary = {
 	'MapScene': preload('res://Scene/MapScene.tscn'),
 	'ShipScene': preload('res://Scene/ShipScene.tscn'),
@@ -22,7 +23,9 @@ var scene :
 	set(x): get_tree().change_scene_to_packed(SCENES[x])
 	get: return get_tree().current_scene
 var prev_scene :StringName
+#endregion
 
-
+	#region	Funcs
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed('EXIT'): get_tree().quit()
+#endregion

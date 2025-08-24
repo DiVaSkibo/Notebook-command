@@ -9,6 +9,7 @@ func _ready() -> void:
 	tween = create_tween()
 	tween.chain().tween_property(self, 'color:a', 0, DURATION)
 	tween.tween_callback(hide)
+	print('\n\t\t' + '_'.repeat(Handler.scene.name.length() + 4) + '\n\t\t| ', Handler.scene.name, ' |\n')
 
 func switch(to :StringName) -> void:
 	show()
