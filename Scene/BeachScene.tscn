@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://m78kv4rekawj"]
+
+[ext_resource type="Texture2D" uid="uid://bbb5wgbepodhm" path="res://Resource/Asset/background/beach.png" id="1_f52rm"]
+[ext_resource type="PackedScene" uid="uid://11uvw53sn2h" path="res://Scene/___phisic_area.tscn" id="2_mtvbk"]
+[ext_resource type="PackedScene" uid="uid://dui626cl3n5lj" path="res://Scene/__Interactor.tscn" id="3_dfdet"]
+[ext_resource type="Resource" uid="uid://dt3ao1jkejoj3" path="res://Resource/interactorWater.tres" id="4_33l4d"]
+[ext_resource type="PackedScene" uid="uid://bxp8xggfdkxe8" path="res://Scene/__Fiuf.tscn" id="5_mtvbk"]
+
+[node name="BeachScene" type="Node2D"]
+
+[node name="beach" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_f52rm")
+
+[node name="PhisicArea" parent="." instance=ExtResource("2_mtvbk")]
+
+[node name="Interactor" parent="." instance=ExtResource("3_dfdet")]
+position = Vector2(328, 540)
+resource = ExtResource("4_33l4d")
+
+[node name="Fiuf" parent="." instance=ExtResource("5_mtvbk")]
+position = Vector2(960, 640)

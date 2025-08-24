@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=3 uid="uid://s74m2cucrlhg"]
+
+[ext_resource type="Texture2D" uid="uid://n35aycbfnp68" path="res://Resource/Asset/background/market.png" id="1_i6qch"]
+[ext_resource type="Texture2D" uid="uid://detxc0h0yj1qt" path="res://Resource/Asset/background/shop.png" id="2_lm1gn"]
+[ext_resource type="PackedScene" uid="uid://11uvw53sn2h" path="res://Scene/___phisic_area.tscn" id="3_3qkuh"]
+[ext_resource type="PackedScene" uid="uid://cgd4eoxo8eqlm" path="res://Scene/__Pirate.tscn" id="4_vx7e6"]
+[ext_resource type="Resource" uid="uid://uerqbr5j7uyj" path="res://Resource/pirateShiushin.tres" id="5_lm1gn"]
+[ext_resource type="PackedScene" uid="uid://bxp8xggfdkxe8" path="res://Scene/__Fiuf.tscn" id="5_xap10"]
+[ext_resource type="PackedScene" uid="uid://dui626cl3n5lj" path="res://Scene/__Interactor.tscn" id="6_vx7e6"]
+[ext_resource type="Resource" uid="uid://cngwik3t40jev" path="res://Resource/interactorRum.tres" id="7_xap10"]
+
+[node name="MarketScene" type="Node2D"]
+
+[node name="field" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_i6qch")
+
+[node name="shop" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_lm1gn")
+
+[node name="PhisicArea" parent="." instance=ExtResource("3_3qkuh")]
+
+[node name="Pirate" parent="." instance=ExtResource("4_vx7e6")]
+position = Vector2(960, 592)
+resource = ExtResource("5_lm1gn")
+
+[node name="Interactor" parent="." instance=ExtResource("6_vx7e6")]
+position = Vector2(1216, 616)
+resource = ExtResource("7_xap10")
+
+[node name="Fiuf" parent="." instance=ExtResource("5_xap10")]
+position = Vector2(376, 640)
