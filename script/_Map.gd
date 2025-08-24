@@ -15,12 +15,6 @@ func _ready() -> void:
 
 	#region	Signals
 func _on_location_navigated(to :Location):
-	if navigator.is_on_target(to):
-		Wallet.show()
-		get_tree().change_scene_to_file('Scene/' + to.scene + '.tscn')
-		print()
-		print('\t\t' + '_'.repeat(to.scene.length() + 4))
-		print('\t\t| ', to.scene, ' |')
-	else:
-		navigator.target = to
+	if navigator.is_on_target(to): Transition.switch(to.scene)
+	else: navigator.target = to
 #endregion

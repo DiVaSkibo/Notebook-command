@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 
 Handler="*res://script/____Handler.gd"
 Wallet="*res://Scene/___Wallet.tscn"
+Transition="*res://Scene/___Transition.tscn"
 
 [display]
 

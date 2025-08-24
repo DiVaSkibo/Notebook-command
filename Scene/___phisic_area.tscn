@@ -12,6 +12,8 @@ normal = Vector2(-1, 0)
 
 [node name="PhisicArea" type="Node2D"]
 script = ExtResource("1_fcdvb")
+left_scene = &"MapScene"
+right_scene = &"MapScene"
 
 [node name="floor" type="StaticBody2D" parent="."]
 position = Vector2(780, 704)
