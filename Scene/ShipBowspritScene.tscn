@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://ekttktxh6y23"]
+
+[ext_resource type="Texture2D" uid="uid://ekxxhd82ycyp" path="res://Resource/Asset/background/shipBowsprit.png" id="1_qyx3x"]
+[ext_resource type="PackedScene" uid="uid://11uvw53sn2h" path="res://Scene/___phisic_area.tscn" id="2_u02qq"]
+[ext_resource type="PackedScene" uid="uid://bxp8xggfdkxe8" path="res://Scene/__Fiuf.tscn" id="3_383qt"]
+[ext_resource type="PackedScene" uid="uid://cgd4eoxo8eqlm" path="res://Scene/__Pirate.tscn" id="4_383qt"]
+[ext_resource type="Resource" uid="uid://uerqbr5j7uyj" path="res://Resource/pirateShiushin.tres" id="5_4och2"]
+
+[node name="ShipBowspritScene" type="Node2D"]
+
+[node name="ship" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_qyx3x")
+
+[node name="PhisicArea" parent="." instance=ExtResource("2_u02qq")]
+right_scene = &"ShipScene"
+
+[node name="Fiuf" parent="." instance=ExtResource("3_383qt")]
+position = Vector2(1536, 640)
+
+[node name="Pirate" parent="." instance=ExtResource("4_383qt")]
+position = Vector2(632, 584)
+resource = ExtResource("5_4och2")

@@ -2,6 +2,9 @@ extends Node
 
 const SCENES :Dictionary = {
 	'MapScene': preload('res://Scene/MapScene.tscn'),
+	'ShipScene': preload('res://Scene/ShipScene.tscn'),
+	'ShipWheelScene': preload('res://Scene/ShipWheelScene.tscn'),
+	'ShipBowspritScene': preload('res://Scene/ShipBowspritScene.tscn'),
 	'BeachScene': preload('res://Scene/BeachScene.tscn'),
 	'MarketScene': preload('res://Scene/MarketScene.tscn'),
 	'IslandScene': preload('res://Scene/IslandScene.tscn')

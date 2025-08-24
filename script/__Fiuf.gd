@@ -14,10 +14,10 @@ func _physics_process(_delta: float) -> void:
 	var direction = Input.get_axis('moveLeft', 'moveRight')
 	if direction:
 		velocity.x = speed * direction
-		if not tween.is_running():
-			tween = create_tween().set_loops()
-			tween.chain().tween_property(self, 'skew', deg_to_rad(11), .11)
-			tween.chain().tween_property(self, 'skew', deg_to_rad(-11), .11)
+		if not tween or not tween.is_running():
+				tween = create_tween().set_loops()
+				tween.chain().tween_property(self, 'skew', deg_to_rad(11), .11)
+				tween.chain().tween_property(self, 'skew', deg_to_rad(-11), .11)
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		if tween: tween.kill()

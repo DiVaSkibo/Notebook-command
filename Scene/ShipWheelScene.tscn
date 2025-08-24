@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvlqy7np371ua"]
+
+[ext_resource type="Texture2D" uid="uid://f2fysyukjqdo" path="res://Resource/Asset/background/shipWheel.png" id="1_tgpij"]
+[ext_resource type="PackedScene" uid="uid://11uvw53sn2h" path="res://Scene/___phisic_area.tscn" id="2_ydt8f"]
+[ext_resource type="PackedScene" uid="uid://bxp8xggfdkxe8" path="res://Scene/__Fiuf.tscn" id="3_ojg7e"]
+[ext_resource type="PackedScene" uid="uid://cgd4eoxo8eqlm" path="res://Scene/__Pirate.tscn" id="3_ydt8f"]
+
+[node name="ShipWheelScene" type="Node2D"]
+
+[node name="ship" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_tgpij")
+
+[node name="PhisicArea" parent="." instance=ExtResource("2_ydt8f")]
+left_scene = &"ShipScene"
+
+[node name="Pirate" parent="." instance=ExtResource("3_ydt8f")]
+position = Vector2(1088, 664)
+
+[node name="Fiuf" parent="." instance=ExtResource("3_ojg7e")]
+position = Vector2(384, 640)
