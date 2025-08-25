@@ -9,7 +9,7 @@ height = 96.0
 
 [resource]
 script = ExtResource("1_adfb1")
-name = "Rum"
+name = &""
 sprite = ExtResource("2_0h8i0")
 mass = 1.5
 shape = SubResource("CapsuleShape2D_adfb1")

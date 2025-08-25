@@ -9,7 +9,7 @@ height = 111.0
 
 [resource]
 script = ExtResource("1_0mkon")
-name = "Bucket"
+name = &""
 sprite = ExtResource("2_owcp8")
 mass = 2.0
 shape = SubResource("CapsuleShape2D_0mkon")
