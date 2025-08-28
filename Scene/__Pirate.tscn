@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cgd4eoxo8eqlm"]
 
 [ext_resource type="Script" uid="uid://cie08ns1s4ajh" path="res://script/__Pirate.gd" id="1_8bugv"]
-[ext_resource type="Texture2D" uid="uid://c8os0qso70cff" path="res://Resource/Asset/character/Shiushin.png" id="3_eqe1w"]
+[ext_resource type="Texture2D" uid="uid://dytloqcojgqxr" path="res://Resource/Asset/character/Shiushin.png" id="3_eqe1w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8bugv"]
 radius = 24.0

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://ccqbqvdoyja6j"]
 
 [ext_resource type="Script" uid="uid://d1y5vndir1wt5" path="res://script/____ItemResource.gd" id="1_adfb1"]
-[ext_resource type="Texture2D" uid="uid://d1uh43a2lqhln" path="res://Resource/Asset/item/Rum.png" id="2_0h8i0"]
+[ext_resource type="Texture2D" uid="uid://xogikroqwtyf" path="res://Resource/Asset/item/Rum.png" id="2_0h8i0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_adfb1"]
 radius = 24.0
