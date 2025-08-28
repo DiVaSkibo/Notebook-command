@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c28ajc76tvb0r"]
 
 [ext_resource type="Script" uid="uid://cwcbpbfrqrcw7" path="res://script/__Item.gd" id="1_q6waq"]
-[ext_resource type="Texture2D" uid="uid://drxgeqjchkbyk" path="res://Resource/Asset/item/Bucket+water.png" id="3_2rwoj"]
+[ext_resource type="Texture2D" uid="uid://b55x4jkk572a5" path="res://Resource/Asset/item/Bucket+water.png" id="3_2rwoj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2rwoj"]
 bounce = 0.75

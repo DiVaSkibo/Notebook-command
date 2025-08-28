@@ -2,7 +2,7 @@
 
 [ext_resource type="Resource" uid="uid://dqmyocw3qmakb" path="res://Resource/itemBucket.tres" id="1_lsegg"]
 [ext_resource type="Script" uid="uid://nitrh56kjirq" path="res://script/____InteractorResource.gd" id="2_ejnvj"]
-[ext_resource type="Texture2D" uid="uid://1g6fomv25s2" path="res://Resource/Asset/background/beachWater.png" id="3_vkgsj"]
+[ext_resource type="Texture2D" uid="uid://bow2yx3q32jy" path="res://Resource/Asset/background/beachWater.png" id="3_vkgsj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lsegg"]
 size = Vector2(656, 1088)

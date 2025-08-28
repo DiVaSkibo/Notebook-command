@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PirateResource" load_steps=4 format=3 uid="uid://bufpkp3jdva1v"]
 
 [ext_resource type="Script" uid="uid://crhhlebjqgdw" path="res://script/____PirateResource.gd" id="1_du5v4"]
-[ext_resource type="Texture2D" uid="uid://d1a6ki30n3a00" path="res://Resource/Asset/character/Bibeni.png" id="2_f4xpw"]
+[ext_resource type="Texture2D" uid="uid://sh7ywichr43p" path="res://Resource/Asset/character/Bibeni.png" id="2_f4xpw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0qoro"]
 radius = 40.0

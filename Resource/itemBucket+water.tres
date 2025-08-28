@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://c6lec34preqcl"]
 
 [ext_resource type="Script" uid="uid://d1y5vndir1wt5" path="res://script/____ItemResource.gd" id="1_tm2a5"]
-[ext_resource type="Texture2D" uid="uid://drxgeqjchkbyk" path="res://Resource/Asset/item/Bucket+water.png" id="2_g8vbg"]
+[ext_resource type="Texture2D" uid="uid://b55x4jkk572a5" path="res://Resource/Asset/item/Bucket+water.png" id="2_g8vbg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tm2a5"]
 radius = 40.0
