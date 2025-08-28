@@ -9,7 +9,7 @@ height = 111.0
 
 [resource]
 script = ExtResource("1_olf55")
-name = &""
+name = &"Flute"
 sprite = ExtResource("2_n2fy3")
 mass = 1.0
 shape = SubResource("CapsuleShape2D_tm2a5")
